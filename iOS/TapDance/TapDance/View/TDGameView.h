@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SpriteKit/SpriteKit.h>
 
 @interface TDGameView : UIView
+
+@property (nonatomic, strong) SKView *skView;
 
 @end
