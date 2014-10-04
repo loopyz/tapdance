@@ -55,6 +55,7 @@
     GameScene *game = [[GameScene alloc] initWithSize:self.skView.frame.size];
     
     [self.skView presentScene:game];
+    [self.navigationItem setHidesBackButton:YES];
 
 }
 
