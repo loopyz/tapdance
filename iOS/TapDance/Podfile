@@ -1,2 +1,3 @@
+source 'https://github.com/CocoaPods/Specs.git'
 workspace 'TapDance'
 pod 'APParallaxHeader', git: "https://github.com/loopyz/APParallaxHeader.git"
