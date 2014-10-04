@@ -1,2 +1,2 @@
 workspace 'TapDance'
-pod 'APParallaxHeader'
+pod 'APParallaxHeader', git: "https://github.com/loopyz/APParallaxHeader.git"

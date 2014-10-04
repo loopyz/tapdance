@@ -7,12 +7,23 @@
 //
 
 #import "TDHomeViewController.h"
+#import <APParallaxHeader/UIScrollView+APParallaxHeader.h>
+
+@interface TDHomeViewController()<APParallaxViewDelegate>
+
+@end
 
 @implementation TDHomeViewController
 
 - (id)init {
     self = [super init];
     if (self) {
+        self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+        
+        [self.tableView addParallaxWithImage:nil andHeight:50];
+        [self.tableView.parallaxView setDelegate:self];
+        [self.tableView addBlackOverlayToParallaxView];
+        [self.tableView.parallaxView.imageView setImage:[UIImage imageNamed:@"HomeHeader"]];
         
     }
     return self;

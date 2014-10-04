@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TDHomeViewController : UIViewController
+@interface TDHomeViewController : UITableViewController
 
 @end

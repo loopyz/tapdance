@@ -2,9 +2,13 @@ PODS:
   - APParallaxHeader (0.1.6)
 
 DEPENDENCIES:
-  - APParallaxHeader
+  - APParallaxHeader (from `https://github.com/loopyz/APParallaxHeader.git`)
+
+EXTERNAL SOURCES:
+  APParallaxHeader:
+    :git: https://github.com/loopyz/APParallaxHeader.git
 
 SPEC CHECKSUMS:
-  APParallaxHeader: 6e7cc27c052be34e1a5655dc2fab6c40eecbbe55
+  APParallaxHeader: 5369815639059caa4e195a178c020f8e2b998336
 
 COCOAPODS: 0.33.1
