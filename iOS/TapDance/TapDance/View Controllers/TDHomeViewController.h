@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TDLoginViewController : UIViewController
+@interface TDHomeViewController : UIViewController
 
 @end

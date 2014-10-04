@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "TDLoginViewController.h"
+#import "TDHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +24,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    TDLoginViewController *hvc = [[TDLoginViewController alloc] init];
+    TDHomeViewController *hvc = [[TDHomeViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:hvc];
     self.navigationController = navigationController;
     self.window.rootViewController = navigationController;

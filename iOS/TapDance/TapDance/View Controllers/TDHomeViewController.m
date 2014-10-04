@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 TapDance. All rights reserved.
 //
 
-#import "TDLoginViewController.h"
+#import "TDHomeViewController.h"
 
-@implementation TDLoginViewController
+@implementation TDHomeViewController
 
 - (id)init {
     self = [super init];
