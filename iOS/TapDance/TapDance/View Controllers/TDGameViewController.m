@@ -10,6 +10,10 @@
 #import "TDGameView.h"
 
 
+#import <SpriteKit/SpriteKit.h>
+
+#import "GameScene.h"
+
 @interface TDGameViewController ()
 
 @property (nonatomic, strong) TDGameView *gameView;
@@ -37,6 +41,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    self.skView = [[SKView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
+    self.skView.showsDrawCount = YES;
+    self.skView.showsNodeCount = YES;
+    self.skView.showsFPS = YES;
+    self.skView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:self.skView];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    GameScene *game = [[GameScene alloc] initWithSize:self.skView.frame.size];
+    
+    [self.skView presentScene:game];
+
 }
 
 - (void)didReceiveMemoryWarning

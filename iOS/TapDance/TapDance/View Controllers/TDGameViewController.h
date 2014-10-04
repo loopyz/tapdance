@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SpriteKit/SpriteKit.h>
 
 @interface TDGameViewController : UIViewController
 
 @property (nonatomic, strong) NSString *gameId;
+@property (nonatomic, strong) SKView *skView;
 
 - (id)initWithGameId: (NSString *)gameId;
 
