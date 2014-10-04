@@ -10,6 +10,7 @@
 #import <APParallaxHeader/UIScrollView+APParallaxHeader.h>
 #import "TDHomeHeaderTableViewCell.h"
 #import "TDHomeSongTableViewCell.h"
+#import "TDGameViewController.h"
 
 @interface TDHomeViewController()<APParallaxViewDelegate>
 
@@ -90,6 +91,11 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
                                                    
         return songCell;
     } else return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%d", indexPath.row]];
+    [self.navigationController pushViewController:gvc animated:NO];
 }
 
 - (BOOL)prefersStatusBarHidden {

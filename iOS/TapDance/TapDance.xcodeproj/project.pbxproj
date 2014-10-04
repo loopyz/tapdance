@@ -18,6 +18,7 @@
 		8D49BED519E06887000E0E44 /* TDHomeHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED419E06887000E0E44 /* TDHomeHeaderTableViewCell.m */; };
 		8D49BED919E075DC000E0E44 /* TDHomeSongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED819E075DC000E0E44 /* TDHomeSongTableViewCell.m */; };
 		F0AA414619E0904400541681 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AA414519E0904400541681 /* Default-568h@2x.png */; };
+		F0AA414919E0921700541681 /* TDGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA414819E0921700541681 /* TDGameViewController.m */; };
 		F38E60E4F3DF0D6F28D674F6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C073D2BE761D92DDCA607CD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		916FAB60087EB0D4FF03415F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B8149B041618F7BBA42CCF4C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F0AA414519E0904400541681 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F0AA414719E0921700541681 /* TDGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDGameViewController.h; path = "View Controllers/TDGameViewController.h"; sourceTree = "<group>"; };
+		F0AA414819E0921700541681 /* TDGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDGameViewController.m; path = "View Controllers/TDGameViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 			children = (
 				8D49BECF19E0627E000E0E44 /* TDHomeViewController.h */,
 				8D49BED019E0627E000E0E44 /* TDHomeViewController.m */,
+				F0AA414719E0921700541681 /* TDGameViewController.h */,
+				F0AA414819E0921700541681 /* TDGameViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				8D49BED919E075DC000E0E44 /* TDHomeSongTableViewCell.m in Sources */,
 				8D49BED119E0627E000E0E44 /* TDHomeViewController.m in Sources */,
 				8D49BE9F19E04874000E0E44 /* main.m in Sources */,
+				F0AA414919E0921700541681 /* TDGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
