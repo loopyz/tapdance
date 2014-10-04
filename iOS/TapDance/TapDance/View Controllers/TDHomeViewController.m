@@ -95,7 +95,7 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%d", indexPath.row]];
-    [self.navigationController pushViewController:gvc animated:NO];
+    [self.navigationController pushViewController:gvc animated:YES];
 }
 
 - (BOOL)prefersStatusBarHidden {

@@ -36,6 +36,8 @@
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
     
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
     
     return YES;
 }

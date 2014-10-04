@@ -17,6 +17,7 @@
 		8D49BED119E0627E000E0E44 /* TDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED019E0627E000E0E44 /* TDHomeViewController.m */; };
 		8D49BED519E06887000E0E44 /* TDHomeHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED419E06887000E0E44 /* TDHomeHeaderTableViewCell.m */; };
 		8D49BED919E075DC000E0E44 /* TDHomeSongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED819E075DC000E0E44 /* TDHomeSongTableViewCell.m */; };
+		8D49BEE919E0A2E2000E0E44 /* TDGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BEE819E0A2E2000E0E44 /* TDGameView.m */; };
 		F0AA414619E0904400541681 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AA414519E0904400541681 /* Default-568h@2x.png */; };
 		F0AA414919E0921700541681 /* TDGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA414819E0921700541681 /* TDGameViewController.m */; };
 		F38E60E4F3DF0D6F28D674F6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C073D2BE761D92DDCA607CD /* libPods.a */; };
@@ -54,6 +55,8 @@
 		8D49BED619E07212000E0E44 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8D49BED719E075DC000E0E44 /* TDHomeSongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDHomeSongTableViewCell.h; path = Cells/TDHomeSongTableViewCell.h; sourceTree = "<group>"; };
 		8D49BED819E075DC000E0E44 /* TDHomeSongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDHomeSongTableViewCell.m; path = Cells/TDHomeSongTableViewCell.m; sourceTree = "<group>"; };
+		8D49BEE719E0A2E2000E0E44 /* TDGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDGameView.h; path = View/TDGameView.h; sourceTree = "<group>"; };
+		8D49BEE819E0A2E2000E0E44 /* TDGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDGameView.m; path = View/TDGameView.m; sourceTree = "<group>"; };
 		916FAB60087EB0D4FF03415F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B8149B041618F7BBA42CCF4C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F0AA414519E0904400541681 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 		8D49BE9B19E04874000E0E44 /* TapDance */ = {
 			isa = PBXGroup;
 			children = (
+				8D49BEE619E0A2B2000E0E44 /* Views */,
 				8D49BED219E0686C000E0E44 /* Cells */,
 				8D49BECE19E06267000E0E44 /* View Controllers */,
 				8D49BEA019E04874000E0E44 /* AppDelegate.h */,
@@ -174,6 +178,15 @@
 				8D49BED819E075DC000E0E44 /* TDHomeSongTableViewCell.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		8D49BEE619E0A2B2000E0E44 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D49BEE719E0A2E2000E0E44 /* TDGameView.h */,
+				8D49BEE819E0A2E2000E0E44 /* TDGameView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		E76DA0CD70E6982AB691FA67 /* Frameworks */ = {
@@ -324,6 +337,7 @@
 				8D49BED519E06887000E0E44 /* TDHomeHeaderTableViewCell.m in Sources */,
 				8D49BEA219E04874000E0E44 /* AppDelegate.m in Sources */,
 				8D49BED919E075DC000E0E44 /* TDHomeSongTableViewCell.m in Sources */,
+				8D49BEE919E0A2E2000E0E44 /* TDGameView.m in Sources */,
 				8D49BED119E0627E000E0E44 /* TDHomeViewController.m in Sources */,
 				8D49BE9F19E04874000E0E44 /* main.m in Sources */,
 				F0AA414919E0921700541681 /* TDGameViewController.m in Sources */,

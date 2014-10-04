@@ -7,8 +7,12 @@
 //
 
 #import "TDGameViewController.h"
+#import "TDGameView.h"
+
 
 @interface TDGameViewController ()
+
+@property (nonatomic, strong) TDGameView *gameView;
 
 @end
 
@@ -19,7 +23,12 @@
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         // Custom initialization
+        self.view.backgroundColor = UIColorFromRGB(0xFBFBFB);
+        
         self.gameId = gameId;
+        _gameView = [[TDGameView alloc] init];
+        
+        self.view = _gameView;
     }
     return self;
 }
