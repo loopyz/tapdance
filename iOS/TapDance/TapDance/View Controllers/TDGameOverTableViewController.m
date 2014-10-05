@@ -87,8 +87,8 @@ static NSString *TDGameOverCellIdentifier = @"TDGameOverTableViewCell";
     
     _gameOverCell.missesView.progressTotal = numMoves;
     _gameOverCell.missesView.progressCounter = [defaults integerForKey:kTDCurrentGameMissesKey];
-    _gameOverCell.averageView.progressCounter = [defaults integerForKey:kTDCurrentGameScoreKey]/numMoves;
-    _gameOverCell.averageView.progressTotal = [defaults integerForKey:kTDCurrentGameScoreKey];
+    _gameOverCell.averageView.progressCounter = [defaults integerForKey:kTDCurrentGameScoreKey];
+    _gameOverCell.averageView.progressTotal = 5 * numMoves;
     _gameOverCell.goodView.progressCounter = [defaults integerForKey:kTDCurrentGameGoodKey];
     _gameOverCell.goodView.progressTotal = numMoves;
     _gameOverCell.greatView.progressTotal = numMoves;

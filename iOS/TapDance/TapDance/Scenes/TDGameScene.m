@@ -41,6 +41,9 @@
         self.misses = 0;
         self.good = 0;
         self.great = 0;
+        
+        // subscribing to early end notification
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endGame:) name:kTDEarlyEndToSceneNotification object:nil];
     }
     return self;
 }
@@ -110,6 +113,13 @@
         }
         if ([move isCompleted]) {
             self.score += move.score;
+            
+            // update score and post notification to update score
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setInteger:self.score forKey:kTDCurrentGameScoreKey];
+            [defaults synchronize];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kTDUpdateCurrentGameScoreNotification object:nil];
+            
             if ((move.score >= 2) && (move.score <= 3)) {
                 self.good += 1;
             } else if (move.score >= 4) {
@@ -128,21 +138,25 @@
         }
         
         if ([move isLast]) {
-            // do end move-y stuff
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            [defaults setInteger:([defaults integerForKey:kTDScoreKey]+self.score) forKey:kTDScoreKey];
-            
-            // update current game scores
-            [defaults setInteger:[self.moves count] forKey:kTDCurrentGameNumMovesKey];
-            [defaults setInteger:self.score forKey:kTDCurrentGameScoreKey];
-            [defaults setInteger:self.misses forKey:kTDCurrentGameMissesKey];
-            [defaults setInteger:self.good forKey:kTDCurrentGameGoodKey];
-            [defaults setInteger:self.great forKey:kTDCurrentGameGreatKey];
-            
-            [defaults synchronize];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kTDEarlyEndToCtrlNotification object:nil];
         }
     }];
     return node;
+}
+
+- (void)endGame:(NSNotification *)notification
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:([defaults integerForKey:kTDScoreKey]+self.score) forKey:kTDScoreKey];
+    
+    // update current game scores
+    [defaults setInteger:[self.moves count] forKey:kTDCurrentGameNumMovesKey];
+    [defaults setInteger:self.score forKey:kTDCurrentGameScoreKey];
+    [defaults setInteger:self.misses forKey:kTDCurrentGameMissesKey];
+    [defaults setInteger:self.good forKey:kTDCurrentGameGoodKey];
+    [defaults setInteger:self.great forKey:kTDCurrentGameGreatKey];
+    
+    [defaults synchronize];
 }
 
 @end

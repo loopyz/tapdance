@@ -27,7 +27,7 @@
     if (!self.completed) {
         self.completed = YES;
         // TODO: set score with myo -- based on some nearness thing
-        self.score = 1;
+        self.score = 4;
     }
 }
 

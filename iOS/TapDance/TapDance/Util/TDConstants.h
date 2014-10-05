@@ -22,4 +22,9 @@ extern NSString *const kTDCurrentGameMissesKey;
 extern NSString *const kTDCurrentGameGoodKey;
 extern NSString *const kTDCurrentGameGreatKey;
 
+#pragma mark - notifications
+extern NSString *const kTDEarlyEndToSceneNotification;
+extern NSString *const kTDEarlyEndToCtrlNotification;
+extern NSString *const kTDUpdateCurrentGameScoreNotification;
+
 @end

@@ -22,4 +22,9 @@ NSString *const kTDCurrentGameMissesKey = @"currentGameMisses";
 NSString *const kTDCurrentGameGoodKey = @"currentGameGood";
 NSString *const kTDCurrentGameGreatKey = @"currentGameGreat";
 
+#pragma mark - notifications
+NSString *const kTDEarlyEndToSceneNotification = @"earlyEndToScene";
+NSString *const kTDEarlyEndToCtrlNotification = @"earlyEndToCtrl";
+NSString *const kTDUpdateCurrentGameScoreNotification = @"updateCurrentGameScore";
+
 @end
