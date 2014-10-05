@@ -17,6 +17,9 @@
 @property CGSize viewsize;
 @property(strong, nonatomic) NSMutableArray *moves;
 @property NSInteger score;
+@property NSInteger misses;
+@property NSInteger good;
+@property NSInteger great;
 
 @property(strong, nonatomic) SKSpriteNode *left;
 @property(strong, nonatomic) SKSpriteNode *right;
@@ -35,6 +38,9 @@
         self.viewsize = size;
         self.moves = moves;
         self.score = 0;
+        self.misses = 0;
+        self.good = 0;
+        self.great = 0;
     }
     return self;
 }
@@ -104,11 +110,18 @@
         }
         if ([move isCompleted]) {
             self.score += move.score;
+            if ((move.score >= 2) && (move.score <= 3)) {
+                self.good += 1;
+            } else if (move.score >= 4) {
+                self.great += 1;
+            }
+            
             SKAction *fadeAway = [SKAction fadeOutWithDuration: 0.25];
             SKAction *remove = [SKAction removeFromParent];
             SKAction *closeSeq = [SKAction sequence:@[fadeAway, remove]];
             [node runAction:closeSeq];
         } else {
+            self.misses += 1;
             SKAction *moveUpAndAway = [SKAction moveByX:0 y:90 duration:0.5];
             [node runAction:moveUpAndAway];
             // create temporary label here
@@ -118,6 +131,14 @@
             // do end move-y stuff
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             [defaults setInteger:([defaults integerForKey:kTDScoreKey]+self.score) forKey:kTDScoreKey];
+            
+            // update current game scores
+            [defaults setInteger:[self.moves count] forKey:kTDCurrentGameNumMovesKey];
+            [defaults setInteger:self.score forKey:kTDCurrentGameScoreKey];
+            [defaults setInteger:self.misses forKey:kTDCurrentGameMissesKey];
+            [defaults setInteger:self.good forKey:kTDCurrentGameGoodKey];
+            [defaults setInteger:self.great forKey:kTDCurrentGameGreatKey];
+            
             [defaults synchronize];
         }
     }];

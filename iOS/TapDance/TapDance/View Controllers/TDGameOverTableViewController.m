@@ -7,7 +7,9 @@
 //
 
 #import "TDGameOverTableViewController.h"
+
 #import "TDGameOverTableViewCell.h"
+#import "TDConstants.h"
 
 @interface TDGameOverTableViewController ()
 
@@ -77,16 +79,47 @@ static NSString *TDGameOverCellIdentifier = @"TDGameOverTableViewCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     _gameOverCell = [self.tableView dequeueReusableCellWithIdentifier:TDGameOverCellIdentifier];
-    _gameOverCell.missesView.progressTotal = 7;
-    _gameOverCell.missesView.progressCounter = 3;
-    _gameOverCell.averageView.progressCounter = 3;
-    _gameOverCell.averageView.progressTotal = 7;
-    _gameOverCell.goodView.progressCounter = 5;
-    _gameOverCell.goodView.progressTotal = 7;
-    _gameOverCell.greatView.progressTotal = 7;
-    _gameOverCell.greatView.progressCounter = 1;
     
-    _gameOverCell.gradeLabel.text = @"A-";
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    int numMoves = [defaults integerForKey:kTDCurrentGameNumMovesKey];
+    
+    _gameOverCell.missesView.progressTotal = numMoves;
+    _gameOverCell.missesView.progressCounter = [defaults integerForKey:kTDCurrentGameMissesKey];
+    _gameOverCell.averageView.progressCounter = [defaults integerForKey:kTDCurrentGameScoreKey]/numMoves;
+    _gameOverCell.averageView.progressTotal = [defaults integerForKey:kTDCurrentGameScoreKey];
+    _gameOverCell.goodView.progressCounter = [defaults integerForKey:kTDCurrentGameGoodKey];
+    _gameOverCell.goodView.progressTotal = numMoves;
+    _gameOverCell.greatView.progressTotal = numMoves;
+    _gameOverCell.greatView.progressCounter = [defaults integerForKey:kTDCurrentGameGreatKey];
+    
+    int grade = ([defaults integerForKey:kTDCurrentGameScoreKey] * 100)/(numMoves*5);
+    
+    NSString *gradeLetter = nil;
+    
+    if (grade >= 90) {
+        gradeLetter = @"A";
+    } else if (grade >= 80) {
+        gradeLetter = @"B";
+    } else if (grade >= 70) {
+        gradeLetter = @"C";
+    } else if (grade >= 60) {
+        gradeLetter = @"D";
+    } else {
+        gradeLetter = @"F";
+    }
+    
+    int leftover = grade % 10;
+    NSString *gradeDesc = nil;
+    
+    if (leftover >= 7) {
+        gradeDesc = @"+";
+    } else if (leftover >= 5) {
+        gradeDesc = @"";
+    } else {
+        gradeDesc = @"-";
+    }
+    
+    _gameOverCell.gradeLabel.text = [NSString stringWithFormat:@"%@%@", gradeLetter, gradeDesc];
     [_gameOverCell.doneButton addTarget:self action:@selector(didTapDone) forControlEvents:UIControlEventTouchUpInside];
     
     return _gameOverCell;

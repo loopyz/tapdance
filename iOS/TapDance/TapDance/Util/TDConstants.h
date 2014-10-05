@@ -15,4 +15,11 @@ extern NSString *const kTDHasBeenLaunchedKey;
 extern NSString *const kTDScoreKey;
 extern NSString *const kTDPersonKey;
 
+#pragma mark - current game
+extern NSString *const kTDCurrentGameNumMovesKey;
+extern NSString *const kTDCurrentGameScoreKey;
+extern NSString *const kTDCurrentGameMissesKey;
+extern NSString *const kTDCurrentGameGoodKey;
+extern NSString *const kTDCurrentGameGreatKey;
+
 @end
