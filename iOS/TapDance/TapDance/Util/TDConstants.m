@@ -15,4 +15,11 @@ NSString *const kTDHasBeenLaunchedKey = @"hasBeenLaunched";
 NSString *const kTDScoreKey = @"score";
 NSString *const kTDPersonKey = @"person";
 
+#pragma mark - current game
+NSString *const kTDCurrentGameNumMovesKey = @"currentGameNumMoves";
+NSString *const kTDCurrentGameScoreKey = @"currentGameScore";
+NSString *const kTDCurrentGameMissesKey = @"currentGameMisses";
+NSString *const kTDCurrentGameGoodKey = @"currentGameGood";
+NSString *const kTDCurrentGameGreatKey = @"currentGameGreat";
+
 @end
