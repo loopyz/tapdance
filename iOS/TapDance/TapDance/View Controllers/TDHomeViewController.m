@@ -1,5 +1,5 @@
 //
-//  TDLoginViewController.m
+//  TDHomeViewController.m
 //  TapDance
 //
 //  Created by Lucy Guo on 10/4/14.
@@ -85,7 +85,7 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         _headerCell.nameLabel.text = [defaults stringForKey:kTDPersonKey];
-        _headerCell.pointsLabel.text = [NSString stringWithFormat:@"Points: %d", [defaults integerForKey:kTDScoreKey]];
+        _headerCell.pointsLabel.text = [NSString stringWithFormat:@"Points: %d", (int)[defaults integerForKey:kTDScoreKey]];
         
         return _headerCell;
     } else if (indexPath.section == TDSongSection) {
@@ -95,22 +95,16 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
         songCell.artistName.text = @"Adam Levigne";
         songCell.difficultyView.backgroundColor = UIColorFromRGB(0x62EB49);
         songCell.difficultyLabel.text = @"Easy";
-                                                   
+        
         return songCell;
     } else return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%d", (int)indexPath.row]];
+    // TDGameOverTableViewController *gvc = [[TDGameOverTableViewController alloc] initWithStyle:UITableViewStylePlain];
     [self.navigationController pushViewController:gvc animated:YES];
-//    if (indexPath.row == 0) {
-//        TLMSettingsViewController *vc = [[TLMSettingsViewController alloc] init];
-//        [self.navigationController pushViewController:vc animated:YES];
-//    } else {
-//        TDGameOverTableViewController *gvc = [[TDGameOverTableViewController alloc] initWithStyle:UITableViewStylePlain];
-//        // [self.navigationController pushViewController:gvc animated:YES];
-//        [self presentViewController:gvc animated:YES completion:nil];
-//    }
+    // [self presentViewController:gvc animated:YES completion:nil];
 }
 
 - (BOOL)prefersStatusBarHidden {

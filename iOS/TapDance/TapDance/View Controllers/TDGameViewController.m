@@ -17,6 +17,7 @@
 #import "AFSoundManager.h"
 #import <SpriteKit/SpriteKit.h>
 
+
 @interface TDGameViewController ()
 
 @property (nonatomic, strong) TDGameView *gameView;
@@ -43,7 +44,6 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(respondToNotification:) name:kTDUpdateCurrentGameScoreNotification object:nil];
         
         [self playMusic];
-
     }
     return self;
 }
@@ -92,13 +92,13 @@
     TDMove *move2 = [[TDMove alloc] initWithDir:RIGHT andTime:1 andLast:NO];
     TDMove *move3 = [[TDMove alloc] initWithDir:UP andTime:3 andLast:NO];
     TDMove *move4 = [[TDMove alloc] initWithDir:DOWN andTime:4 andLast:YES];
-
+    
     NSMutableArray *moves = [[NSMutableArray alloc] initWithObjects:move1, move2, move3, move4, nil];
     TDGameScene *game = [[TDGameScene alloc] initWithViewSize:self.view.frame.size andMoves:moves];
     
     [_gameView.skView presentScene:game];
     [self.navigationItem setHidesBackButton:YES];
-
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,8 +8,6 @@
 
 #import "TDMove.h"
 
-#import <UIKit/UIKit.h>
-
 @implementation TDMove
 
 - (id)initWithDir: (enum DIR)direction andTime: (double)time andLast:(bool)last

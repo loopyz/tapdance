@@ -1,5 +1,5 @@
 //
-//  TDLoginViewController.h
+//  TDHomeViewController.h
 //  TapDance
 //
 //  Created by Lucy Guo on 10/4/14.
