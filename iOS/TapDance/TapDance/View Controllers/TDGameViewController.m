@@ -17,7 +17,6 @@
 #import "AFSoundManager.h"
 #import <SpriteKit/SpriteKit.h>
 
-
 @interface TDGameViewController ()
 
 @property (nonatomic, strong) TDGameView *gameView;
@@ -44,6 +43,7 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(respondToNotification:) name:kTDUpdateCurrentGameScoreNotification object:nil];
         
         [self playMusic];
+
     }
     return self;
 }

@@ -93,11 +93,11 @@
     goal.name = [NSString stringWithFormat:@"%@Move", [move getMoveDirName:direction]];
     return goal;
 }
-         
+
 - (SKSpriteNode *)createMove:(TDMove *)move
 {
     SKSpriteNode *node = [SKSpriteNode spriteNodeWithImageNamed:[move getNodePicName]];
-
+    
     node.size = CGSizeMake(51, 51);
     node.position = [[move getNodePosition:self.viewsize.width] CGPointValue];
     node.name = [move getNodeName];
@@ -105,12 +105,9 @@
     NSTimeInterval time = [move getTime];
     NSLog(@"time %f", time);
     SKAction *pause = [SKAction waitForDuration:[move getTime]];
-    SKAction *moveUp = [SKAction moveByX:0 y:self.viewsize.height-90 duration:5];
+    SKAction *moveUp = [SKAction moveByX:0 y:self.viewsize.height duration:5];
     SKAction *moveSeq = [SKAction sequence:@[pause, moveUp]];
     [node runAction:moveSeq completion:^{
-        if (move.direction == LEFT) {
-            [move completeMove];
-        }
         if ([move isCompleted]) {
             self.score += move.score;
             

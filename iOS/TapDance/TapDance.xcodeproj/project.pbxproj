@@ -71,8 +71,8 @@ fi
 		<dict>
 			<key>children</key>
 			<array>
+				<string>8DC912B319E13A310001590C</string>
 				<string>F0AA414519E0904400541681</string>
-				<string>8D49BE9B19E04874000E0E44</string>
 				<string>8D49BEB519E04875000E0E44</string>
 				<string>8D49BE9A19E04874000E0E44</string>
 				<string>2FE351E6E995712C55F13DA0</string>
@@ -158,20 +158,21 @@ fi
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>8D49BEA519E04874000E0E44</string>
-				<string>8D49BED519E06887000E0E44</string>
-				<string>8D49BEA219E04874000E0E44</string>
-				<string>8DA93B7919E0C10300F3862C</string>
-				<string>8D49BED919E075DC000E0E44</string>
-				<string>8D49BEE919E0A2E2000E0E44</string>
-				<string>8DA128C119E104E5005D92BE</string>
-				<string>8DA128B919E104B0005D92BE</string>
-				<string>8DA128BD19E104D7005D92BE</string>
-				<string>8D49BED119E0627E000E0E44</string>
-				<string>8D49BE9F19E04874000E0E44</string>
-				<string>F0AA414919E0921700541681</string>
-				<string>8DA128B819E104B0005D92BE</string>
-				<string>8DE9958419E0E4B500C4926D</string>
+				<string>8DC912EC19E13A310001590C</string>
+				<string>8DC912E319E13A310001590C</string>
+				<string>8DC912F719E13A310001590C</string>
+				<string>8DC912F119E13A310001590C</string>
+				<string>8DC912F019E13A310001590C</string>
+				<string>8DC912F219E13A310001590C</string>
+				<string>8DC912E719E13A310001590C</string>
+				<string>8DC912F619E13A310001590C</string>
+				<string>8DC912E819E13A310001590C</string>
+				<string>8DC912F819E13A310001590C</string>
+				<string>8DC912ED19E13A310001590C</string>
+				<string>8DC912F319E13A310001590C</string>
+				<string>8DC912E919E13A310001590C</string>
+				<string>8DC912F519E13A310001590C</string>
+				<string>8DC912F419E13A310001590C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
@@ -199,11 +200,13 @@ fi
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>8D49BEA819E04874000E0E44</string>
 				<string>F0AA414619E0904400541681</string>
-				<string>8D49BEAD19E04874000E0E44</string>
-				<string>8D49BEAA19E04874000E0E44</string>
-				<string>8DA128C419E11E81005D92BE</string>
+				<string>8DC912EA19E13A310001590C</string>
+				<string>8DC912EE19E13A310001590C</string>
+				<string>8DC912EB19E13A310001590C</string>
+				<string>8DC912E519E13A310001590C</string>
+				<string>8DC912E419E13A310001590C</string>
+				<string>8DC912E619E13A310001590C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXResourcesBuildPhase</string>
@@ -263,219 +266,6 @@ fi
 			<string>Products</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BE9B19E04874000E0E44</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8DA128C219E11E81005D92BE</string>
-				<string>8DA128BE19E104E5005D92BE</string>
-				<string>8DA128BA19E104D7005D92BE</string>
-				<string>8DA128B319E104B0005D92BE</string>
-				<string>8D49BEE619E0A2B2000E0E44</string>
-				<string>8D49BED219E0686C000E0E44</string>
-				<string>8D49BECE19E06267000E0E44</string>
-				<string>8D49BEA019E04874000E0E44</string>
-				<string>8D49BEA119E04874000E0E44</string>
-				<string>8D49BEA319E04874000E0E44</string>
-				<string>8D49BEA419E04874000E0E44</string>
-				<string>8D49BEA619E04874000E0E44</string>
-				<string>8D49BEA919E04874000E0E44</string>
-				<string>8D49BEAB19E04874000E0E44</string>
-				<string>8D49BE9C19E04874000E0E44</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>TapDance</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BE9C19E04874000E0E44</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8D49BE9D19E04874000E0E44</string>
-				<string>8D49BE9E19E04874000E0E44</string>
-				<string>8D49BED619E07212000E0E44</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BE9D19E04874000E0E44</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BE9E19E04874000E0E44</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BE9F19E04874000E0E44</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D49BE9E19E04874000E0E44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8D49BEA019E04874000E0E44</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BEA119E04874000E0E44</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BEA219E04874000E0E44</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D49BEA119E04874000E0E44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8D49BEA319E04874000E0E44</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BEA419E04874000E0E44</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BEA519E04874000E0E44</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D49BEA419E04874000E0E44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8D49BEA619E04874000E0E44</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8D49BEA719E04874000E0E44</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BEA719E04874000E0E44</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BEA819E04874000E0E44</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D49BEA619E04874000E0E44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8D49BEA919E04874000E0E44</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BEAA19E04874000E0E44</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D49BEA919E04874000E0E44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8D49BEAB19E04874000E0E44</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8D49BEAC19E04874000E0E44</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BEAC19E04874000E0E44</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BEAD19E04874000E0E44</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D49BEAB19E04874000E0E44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>8D49BEAE19E04875000E0E44</key>
 		<dict>
@@ -920,25 +710,37 @@ fi
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>8D49BECE19E06267000E0E44</key>
+		<key>8DC912B319E13A310001590C</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>8D49BECF19E0627E000E0E44</string>
-				<string>8D49BED019E0627E000E0E44</string>
-				<string>F0AA414719E0921700541681</string>
-				<string>F0AA414819E0921700541681</string>
-				<string>8DA93B7719E0C10300F3862C</string>
-				<string>8DA93B7819E0C10300F3862C</string>
+				<string>8DC912B419E13A310001590C</string>
+				<string>8DC912B519E13A310001590C</string>
+				<string>8DC912B619E13A310001590C</string>
+				<string>8DC912B819E13A310001590C</string>
+				<string>8DC912BA19E13A310001590C</string>
+				<string>8DC912BC19E13A310001590C</string>
+				<string>8DC912C319E13A310001590C</string>
+				<string>8DC912C419E13A310001590C</string>
+				<string>8DC912C519E13A310001590C</string>
+				<string>8DC912C619E13A310001590C</string>
+				<string>8DC912C919E13A310001590C</string>
+				<string>8DC912CC19E13A310001590C</string>
+				<string>8DC912CD19E13A310001590C</string>
+				<string>8DC912D019E13A310001590C</string>
+				<string>8DC912D519E13A310001590C</string>
+				<string>8DC912D819E13A310001590C</string>
+				<string>8DC912E119E13A310001590C</string>
+				<string>8DC912E219E13A310001590C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>View Controllers</string>
+			<key>path</key>
+			<string>TapDance</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8D49BECF19E0627E000E0E44</key>
+		<key>8DC912B419E13A310001590C</key>
 		<dict>
 			<key>fileEncoding</key>
 			<string>4</string>
@@ -946,14 +748,12 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TDHomeViewController.h</string>
 			<key>path</key>
-			<string>View Controllers/TDHomeViewController.h</string>
+			<string>AppDelegate.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8D49BED019E0627E000E0E44</key>
+		<key>8DC912B519E13A310001590C</key>
 		<dict>
 			<key>fileEncoding</key>
 			<string>4</string>
@@ -961,39 +761,108 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>TDHomeViewController.m</string>
 			<key>path</key>
-			<string>View Controllers/TDHomeViewController.m</string>
+			<string>AppDelegate.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8D49BED119E0627E000E0E44</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D49BED019E0627E000E0E44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8D49BED219E0686C000E0E44</key>
+		<key>8DC912B619E13A310001590C</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>8D49BED319E06887000E0E44</string>
-				<string>8D49BED419E06887000E0E44</string>
-				<string>8D49BED719E075DC000E0E44</string>
-				<string>8D49BED819E075DC000E0E44</string>
-				<string>8DE9958219E0E4B500C4926D</string>
-				<string>8DE9958319E0E4B500C4926D</string>
+				<string>8DC912B719E13A310001590C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Assets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912B719E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.json</string>
+			<key>path</key>
+			<string>model.json</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912B819E13A310001590C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8DC912B919E13A310001590C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
 			<key>name</key>
+			<string>LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912B919E13A310001590C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912BA19E13A310001590C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8DC912BB19E13A310001590C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912BB19E13A310001590C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912BC19E13A310001590C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8DC912BD19E13A310001590C</string>
+				<string>8DC912BE19E13A310001590C</string>
+				<string>8DC912BF19E13A310001590C</string>
+				<string>8DC912C019E13A310001590C</string>
+				<string>8DC912C119E13A310001590C</string>
+				<string>8DC912C219E13A310001590C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
 			<string>Cells</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8D49BED319E06887000E0E44</key>
+		<key>8DC912BD19E13A310001590C</key>
 		<dict>
 			<key>fileEncoding</key>
 			<string>4</string>
@@ -1001,14 +870,38 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
-			<key>name</key>
+			<key>path</key>
+			<string>TDGameOverTableViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912BE19E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TDGameOverTableViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912BF19E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
 			<string>TDHomeHeaderTableViewCell.h</string>
-			<key>path</key>
-			<string>Cells/TDHomeHeaderTableViewCell.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8D49BED419E06887000E0E44</key>
+		<key>8DC912C019E13A310001590C</key>
 		<dict>
 			<key>fileEncoding</key>
 			<string>4</string>
@@ -1016,32 +909,12 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
-			<key>name</key>
+			<key>path</key>
 			<string>TDHomeHeaderTableViewCell.m</string>
-			<key>path</key>
-			<string>Cells/TDHomeHeaderTableViewCell.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8D49BED519E06887000E0E44</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D49BED419E06887000E0E44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8D49BED619E07212000E0E44</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PrefixHeader.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BED719E075DC000E0E44</key>
+		<key>8DC912C119E13A310001590C</key>
 		<dict>
 			<key>fileEncoding</key>
 			<string>4</string>
@@ -1049,14 +922,12 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
-			<key>name</key>
+			<key>path</key>
 			<string>TDHomeSongTableViewCell.h</string>
-			<key>path</key>
-			<string>Cells/TDHomeSongTableViewCell.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8D49BED819E075DC000E0E44</key>
+		<key>8DC912C219E13A310001590C</key>
 		<dict>
 			<key>fileEncoding</key>
 			<string>4</string>
@@ -1064,101 +935,36 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
-			<key>name</key>
+			<key>path</key>
 			<string>TDHomeSongTableViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912C319E13A310001590C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
 			<key>path</key>
-			<string>Cells/TDHomeSongTableViewCell.m</string>
+			<string>Images.xcassets</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8D49BED919E075DC000E0E44</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D49BED819E075DC000E0E44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8D49BEE619E0A2B2000E0E44</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8D49BEE719E0A2E2000E0E44</string>
-				<string>8D49BEE819E0A2E2000E0E44</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BEE719E0A2E2000E0E44</key>
+		<key>8DC912C419E13A310001590C</key>
 		<dict>
 			<key>fileEncoding</key>
 			<string>4</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TDGameView.h</string>
+			<string>text.plist.xml</string>
 			<key>path</key>
-			<string>View/TDGameView.h</string>
+			<string>Info.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8D49BEE819E0A2E2000E0E44</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>TDGameView.m</string>
-			<key>path</key>
-			<string>View/TDGameView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D49BEE919E0A2E2000E0E44</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D49BEE819E0A2E2000E0E44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8DA128B319E104B0005D92BE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8DA128B419E104B0005D92BE</string>
-				<string>8DA128B519E104B0005D92BE</string>
-				<string>8DA128B619E104B0005D92BE</string>
-				<string>8DA128B719E104B0005D92BE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Util</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8DA128B419E104B0005D92BE</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MyoCommunicator.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8DA128B519E104B0005D92BE</key>
+		<key>8DC912C519E13A310001590C</key>
 		<dict>
 			<key>fileEncoding</key>
 			<string>4</string>
@@ -1167,103 +973,16 @@ fi
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>MyoCommunicator.m</string>
+			<string>main.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8DA128B619E104B0005D92BE</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TDConstants.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8DA128B719E104B0005D92BE</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TDConstants.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8DA128B819E104B0005D92BE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8DA128B519E104B0005D92BE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8DA128B919E104B0005D92BE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8DA128B719E104B0005D92BE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8DA128BA19E104D7005D92BE</key>
+		<key>8DC912C619E13A310001590C</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>8DA128BB19E104D7005D92BE</string>
-				<string>8DA128BC19E104D7005D92BE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Scenes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8DA128BB19E104D7005D92BE</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TDGameScene.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8DA128BC19E104D7005D92BE</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TDGameScene.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8DA128BD19E104D7005D92BE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8DA128BC19E104D7005D92BE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8DA128BE19E104E5005D92BE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8DA128BF19E104E5005D92BE</string>
-				<string>8DA128C019E104E5005D92BE</string>
+				<string>8DC912C719E13A310001590C</string>
+				<string>8DC912C819E13A310001590C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1272,7 +991,7 @@ fi
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8DA128BF19E104E5005D92BE</key>
+		<key>8DC912C719E13A310001590C</key>
 		<dict>
 			<key>fileEncoding</key>
 			<string>4</string>
@@ -1285,7 +1004,7 @@ fi
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8DA128C019E104E5005D92BE</key>
+		<key>8DC912C819E13A310001590C</key>
 		<dict>
 			<key>fileEncoding</key>
 			<string>4</string>
@@ -1298,18 +1017,11 @@ fi
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8DA128C119E104E5005D92BE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8DA128C019E104E5005D92BE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8DA128C219E11E81005D92BE</key>
+		<key>8DC912C919E13A310001590C</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>8DA128C319E11E81005D92BE</string>
+				<string>8DC912CA19E13A310001590C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1318,7 +1030,7 @@ fi
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8DA128C319E11E81005D92BE</key>
+		<key>8DC912CA19E13A310001590C</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
@@ -1329,14 +1041,7 @@ fi
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8DA128C419E11E81005D92BE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8DA128C319E11E81005D92BE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8DA93B7719E0C10300F3862C</key>
+		<key>8DC912CC19E13A310001590C</key>
 		<dict>
 			<key>fileEncoding</key>
 			<string>4</string>
@@ -1344,14 +1049,39 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TDGameOverTableViewController.h</string>
 			<key>path</key>
-			<string>View Controllers/TDGameOverTableViewController.h</string>
+			<string>PrefixHeader.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8DA93B7819E0C10300F3862C</key>
+		<key>8DC912CD19E13A310001590C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8DC912CE19E13A310001590C</string>
+				<string>8DC912CF19E13A310001590C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Scenes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912CE19E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TDGameScene.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912CF19E13A310001590C</key>
 		<dict>
 			<key>fileEncoding</key>
 			<string>4</string>
@@ -1359,17 +1089,413 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>TDGameOverTableViewController.m</string>
 			<key>path</key>
-			<string>View Controllers/TDGameOverTableViewController.m</string>
+			<string>TDGameScene.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8DA93B7919E0C10300F3862C</key>
+		<key>8DC912D019E13A310001590C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8DC912D119E13A310001590C</string>
+				<string>8DC912D219E13A310001590C</string>
+				<string>8DC912D319E13A310001590C</string>
+				<string>8DC912D419E13A310001590C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Util</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912D119E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MyoCommunicator.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912D219E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MyoCommunicator.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912D319E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TDConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912D419E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TDConstants.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912D519E13A310001590C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8DC912D619E13A310001590C</string>
+				<string>8DC912D719E13A310001590C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>View</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912D619E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TDGameView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912D719E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TDGameView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912D819E13A310001590C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8DC912D919E13A310001590C</string>
+				<string>8DC912DA19E13A310001590C</string>
+				<string>8DC912DB19E13A310001590C</string>
+				<string>8DC912DC19E13A310001590C</string>
+				<string>8DC912DD19E13A310001590C</string>
+				<string>8DC912DE19E13A310001590C</string>
+				<string>8DC912DF19E13A310001590C</string>
+				<string>8DC912E019E13A310001590C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>View Controllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912D919E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TDGameOverTableViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912DA19E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TDGameOverTableViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912DB19E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TDGameViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912DC19E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TDGameViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912DD19E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TDHomeViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912DE19E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TDHomeViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912DF19E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TDLoginViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912E019E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TDLoginViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912E119E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912E219E13A310001590C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC912E319E13A310001590C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8DA93B7819E0C10300F3862C</string>
+			<string>8DC912B519E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912E419E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912B719E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912E519E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912B819E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912E619E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912BA19E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912E719E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912BE19E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912E819E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912C019E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912E919E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912C219E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912EA19E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912C319E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912EB19E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912C419E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912EC19E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912C519E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912ED19E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912C819E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912EE19E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912CA19E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912F019E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912CF19E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912F119E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912D219E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912F219E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912D419E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912F319E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912D719E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912F419E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912DA19E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912F519E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912DC19E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912F619E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912DE19E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912F719E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912E019E13A310001590C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DC912F819E13A310001590C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC912E219E13A310001590C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1390,43 +1516,6 @@ fi
 		<dict>
 			<key>fileRef</key>
 			<string>8DE9958019E0D40C00C4926D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8DE9958219E0E4B500C4926D</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TDGameOverTableViewCell.h</string>
-			<key>path</key>
-			<string>Cells/TDGameOverTableViewCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8DE9958319E0E4B500C4926D</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>TDGameOverTableViewCell.m</string>
-			<key>path</key>
-			<string>Cells/TDGameOverTableViewCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8DE9958419E0E4B500C4926D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8DE9958319E0E4B500C4926D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1514,43 +1603,6 @@ fi
 		<dict>
 			<key>fileRef</key>
 			<string>F0AA414519E0904400541681</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F0AA414719E0921700541681</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TDGameViewController.h</string>
-			<key>path</key>
-			<string>View Controllers/TDGameViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F0AA414819E0921700541681</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>TDGameViewController.m</string>
-			<key>path</key>
-			<string>View Controllers/TDGameViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F0AA414919E0921700541681</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F0AA414819E0921700541681</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>

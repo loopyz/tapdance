@@ -9,7 +9,6 @@
 #import "TDGameOverTableViewController.h"
 
 #import "TDGameOverTableViewCell.h"
-#import "TDHomeViewController.h"
 #import "TDConstants.h"
 
 @interface TDGameOverTableViewController ()
@@ -29,7 +28,6 @@ static NSString *TDGameOverCellIdentifier = @"TDGameOverTableViewCell";
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         self.tableView.backgroundColor = UIColorFromRGB(0x03193B);
         [self.tableView registerClass:[TDGameOverTableViewCell class] forCellReuseIdentifier:TDGameOverCellIdentifier];
-
     }
     return self;
 }
@@ -45,19 +43,6 @@ static NSString *TDGameOverCellIdentifier = @"TDGameOverTableViewCell";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-
-}
-
-- (void)didTapDone {
-    // [self.navigationController popToRootViewControllerAnimated:YES];
-    [self.navigationController pushViewController:[[TDHomeViewController alloc] init] animated:YES];
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,7 +66,7 @@ static NSString *TDGameOverCellIdentifier = @"TDGameOverTableViewCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     _gameOverCell = [self.tableView dequeueReusableCellWithIdentifier:TDGameOverCellIdentifier];
-    
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     int numMoves = [defaults integerForKey:kTDCurrentGameNumMovesKey];
     
