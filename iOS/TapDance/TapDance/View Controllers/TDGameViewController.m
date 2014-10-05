@@ -45,7 +45,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    GameScene *game = [[GameScene alloc] initWithSize:self.skView.frame.size];
+    NSLog(@"size %d %d", self.skView.frame.size.height, self.skView.frame.size.width);
+    GameScene *game = [[GameScene alloc] initWithViewSize:self.view.frame.size];
     
     [_gameView.skView presentScene:game];
     [self.navigationItem setHidesBackButton:YES];
