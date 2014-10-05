@@ -28,6 +28,8 @@
 @property(strong, nonatomic) SKSpriteNode *down;
 
 @property(strong, nonatomic) SKSpriteNode *missedText;
+@property(strong, nonatomic) SKSpriteNode *goodText;
+@property(strong, nonatomic) SKSpriteNode *greatText;
 
 @end
 
@@ -74,7 +76,9 @@
     [self addChild:self.up];
     [self addChild:self.down];
     
-    self.missedText = [self createMissedText];
+    self.missedText = [self createText:@"MissedText"];
+    self.goodText = [self createText:@"GoodText"];
+    self.greatText = [self createText:@"GreatText"];
     
     for (TDMove *move in self.moves)
     {
@@ -99,9 +103,9 @@
     return goal;
 }
 
-- (SKSpriteNode *)createMissedText
+- (SKSpriteNode *)createText:(NSString *)textStr
 {
-    SKSpriteNode *text = [SKSpriteNode spriteNodeWithImageNamed:@"MissedText"];
+    SKSpriteNode *text = [SKSpriteNode spriteNodeWithImageNamed:textStr];
     text.position = CGPointMake(self.viewsize.width/2, self.viewsize.height - 150);
     return text;
 }
@@ -131,11 +135,35 @@
             [defaults setInteger:self.score forKey:kTDCurrentGameScoreKey];
             [defaults synchronize];
             [[NSNotificationCenter defaultCenter] postNotificationName:kTDUpdateCurrentGameScoreNotification object:nil];
+            // create temporary label here
+            SKAction *tmppause = [SKAction waitForDuration:1.5];
+            SKAction *tmpremove = [SKAction removeFromParent];
+            SKAction *missedSeq = [SKAction sequence:@[tmppause, tmpremove]];
+            
+            
             
             if ((move.score >= 2) && (move.score <= 3)) {
                 self.good += 1;
+                if (!self.goodText.parent) {
+                    [self addChild:self.goodText];
+                    [self.goodText runAction:missedSeq];
+                } else {
+                    [self.goodText runAction:tmppause completion:^{
+                        [self addChild:self.goodText];
+                        [self.goodText runAction:missedSeq];
+                    }];
+                }
             } else if (move.score >= 4) {
                 self.great += 1;
+                if (!self.greatText.parent) {
+                    [self addChild:self.greatText];
+                    [self.greatText runAction:missedSeq];
+                } else {
+                    [self.greatText runAction:tmppause completion:^{
+                        [self addChild:self.greatText];
+                        [self.greatText runAction:missedSeq];
+                    }];
+                }
             }
             
             SKAction *fadeAway = [SKAction fadeOutWithDuration: 0.25];
