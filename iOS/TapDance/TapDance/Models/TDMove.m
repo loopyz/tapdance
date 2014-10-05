@@ -49,7 +49,7 @@
 
 - (NSString *)getNodeName
 {
-    return [NSString stringWithFormat:@"%@%dMoveNode", [self getMoveDirName], self.time];
+    return [NSString stringWithFormat:@"%@%fMoveNode", [self getMoveDirName], self.time];
 }
 
 - (NSValue *)getNodePosition

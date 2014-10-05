@@ -61,7 +61,6 @@
          
 - (SKSpriteNode *)createMove:(TDMove *)move
 {
-    CGSize size = CGSizeMake(self.viewsize.width/2, self.viewsize.height/2);
     SKSpriteNode *node = [SKSpriteNode spriteNodeWithImageNamed:[move getNodePicName]];
 
     node.size = CGSizeMake(51, 51);
@@ -69,7 +68,7 @@
     node.name = [move getNodeName];
 
     NSTimeInterval time = [move getTime];
-    NSLog(@"time %d", time);
+    NSLog(@"time %f", time);
     SKAction *pause = [SKAction waitForDuration:[move getTime]];
     SKAction *moveUp = [SKAction moveByX:0 y:self.viewsize.height duration:5];
     SKAction *moveSeq = [SKAction sequence:@[pause, moveUp]];

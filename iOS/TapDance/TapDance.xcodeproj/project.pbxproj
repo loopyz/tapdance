@@ -14,15 +14,19 @@
 		8D49BEAA19E04874000E0E44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D49BEA919E04874000E0E44 /* Images.xcassets */; };
 		8D49BEAD19E04874000E0E44 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D49BEAB19E04874000E0E44 /* LaunchScreen.xib */; };
 		8D49BEB919E04875000E0E44 /* TapDanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BEB819E04875000E0E44 /* TapDanceTests.m */; };
-		8D49BED119E0627E000E0E44 /* TDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED019E0627E000E0E44 /* TDHomeViewController.m */; };
-		8D49BED519E06887000E0E44 /* TDHomeHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED419E06887000E0E44 /* TDHomeHeaderTableViewCell.m */; };
-		8D49BED919E075DC000E0E44 /* TDHomeSongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED819E075DC000E0E44 /* TDHomeSongTableViewCell.m */; };
-		8D49BEE919E0A2E2000E0E44 /* TDGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BEE819E0A2E2000E0E44 /* TDGameView.m */; };
+		F03F930219E0E62F0018833C /* TDHomeHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F92EA19E0E62F0018833C /* TDHomeHeaderTableViewCell.m */; };
+		F03F930319E0E62F0018833C /* TDHomeSongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F92EC19E0E62F0018833C /* TDHomeSongTableViewCell.m */; };
+		F03F930419E0E62F0018833C /* TDMove.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F92EF19E0E62F0018833C /* TDMove.m */; };
+		F03F930519E0E62F0018833C /* TDGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F92F219E0E62F0018833C /* TDGameScene.m */; };
+		F03F930719E0E62F0018833C /* MyoCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F92F719E0E62F0018833C /* MyoCommunicator.m */; };
+		F03F930819E0E62F0018833C /* TDGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F92FA19E0E62F0018833C /* TDGameView.m */; };
+		F03F930919E0E62F0018833C /* TDGameOverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F92FD19E0E62F0018833C /* TDGameOverTableViewController.m */; };
+		F03F930A19E0E62F0018833C /* TDGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F92FF19E0E62F0018833C /* TDGameViewController.m */; };
+		F03F930B19E0E62F0018833C /* TDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F930119E0E62F0018833C /* TDHomeViewController.m */; };
+		F03F930D19E0E65A0018833C /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03F930C19E0E65A0018833C /* MyoKit.framework */; };
+		F03F931019E0E7630018833C /* TDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F930F19E0E7630018833C /* TDLoginViewController.m */; };
 		F0AA414619E0904400541681 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AA414519E0904400541681 /* Default-568h@2x.png */; };
-		F0AA414919E0921700541681 /* TDGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA414819E0921700541681 /* TDGameViewController.m */; };
 		F0BCDCA619E098F90030030B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BCDCA519E098F90030030B /* SpriteKit.framework */; };
-		F0FC312419E0CC1000718934 /* TDMove.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FC312319E0CC1000718934 /* TDMove.m */; };
-		F0FC312719E0CC3C00718934 /* TDGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FC312619E0CC3C00718934 /* TDGameScene.m */; };
 		F0FC312919E0D46800718934 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC312819E0D46800718934 /* UIKit.framework */; };
 		F38E60E4F3DF0D6F28D674F6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C073D2BE761D92DDCA607CD /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -52,25 +56,32 @@
 		8D49BEB219E04875000E0E44 /* TapDanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapDanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D49BEB719E04875000E0E44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D49BEB819E04875000E0E44 /* TapDanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TapDanceTests.m; sourceTree = "<group>"; };
-		8D49BECF19E0627E000E0E44 /* TDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDHomeViewController.h; path = "View Controllers/TDHomeViewController.h"; sourceTree = "<group>"; };
-		8D49BED019E0627E000E0E44 /* TDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDHomeViewController.m; path = "View Controllers/TDHomeViewController.m"; sourceTree = "<group>"; };
-		8D49BED319E06887000E0E44 /* TDHomeHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDHomeHeaderTableViewCell.h; path = Cells/TDHomeHeaderTableViewCell.h; sourceTree = "<group>"; };
-		8D49BED419E06887000E0E44 /* TDHomeHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDHomeHeaderTableViewCell.m; path = Cells/TDHomeHeaderTableViewCell.m; sourceTree = "<group>"; };
 		8D49BED619E07212000E0E44 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		8D49BED719E075DC000E0E44 /* TDHomeSongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDHomeSongTableViewCell.h; path = Cells/TDHomeSongTableViewCell.h; sourceTree = "<group>"; };
-		8D49BED819E075DC000E0E44 /* TDHomeSongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDHomeSongTableViewCell.m; path = Cells/TDHomeSongTableViewCell.m; sourceTree = "<group>"; };
-		8D49BEE719E0A2E2000E0E44 /* TDGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDGameView.h; path = View/TDGameView.h; sourceTree = "<group>"; };
-		8D49BEE819E0A2E2000E0E44 /* TDGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDGameView.m; path = View/TDGameView.m; sourceTree = "<group>"; };
 		916FAB60087EB0D4FF03415F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B8149B041618F7BBA42CCF4C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F03F92E919E0E62F0018833C /* TDHomeHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeHeaderTableViewCell.h; sourceTree = "<group>"; };
+		F03F92EA19E0E62F0018833C /* TDHomeHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeHeaderTableViewCell.m; sourceTree = "<group>"; };
+		F03F92EB19E0E62F0018833C /* TDHomeSongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeSongTableViewCell.h; sourceTree = "<group>"; };
+		F03F92EC19E0E62F0018833C /* TDHomeSongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeSongTableViewCell.m; sourceTree = "<group>"; };
+		F03F92EE19E0E62F0018833C /* TDMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMove.h; sourceTree = "<group>"; };
+		F03F92EF19E0E62F0018833C /* TDMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMove.m; sourceTree = "<group>"; };
+		F03F92F119E0E62F0018833C /* TDGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDGameScene.h; sourceTree = "<group>"; };
+		F03F92F219E0E62F0018833C /* TDGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDGameScene.m; sourceTree = "<group>"; };
+		F03F92F619E0E62F0018833C /* MyoCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyoCommunicator.h; sourceTree = "<group>"; };
+		F03F92F719E0E62F0018833C /* MyoCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyoCommunicator.m; sourceTree = "<group>"; };
+		F03F92F919E0E62F0018833C /* TDGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDGameView.h; sourceTree = "<group>"; };
+		F03F92FA19E0E62F0018833C /* TDGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDGameView.m; sourceTree = "<group>"; };
+		F03F92FC19E0E62F0018833C /* TDGameOverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDGameOverTableViewController.h; sourceTree = "<group>"; };
+		F03F92FD19E0E62F0018833C /* TDGameOverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDGameOverTableViewController.m; sourceTree = "<group>"; };
+		F03F92FE19E0E62F0018833C /* TDGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDGameViewController.h; sourceTree = "<group>"; };
+		F03F92FF19E0E62F0018833C /* TDGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDGameViewController.m; sourceTree = "<group>"; };
+		F03F930019E0E62F0018833C /* TDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeViewController.h; sourceTree = "<group>"; };
+		F03F930119E0E62F0018833C /* TDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeViewController.m; sourceTree = "<group>"; };
+		F03F930C19E0E65A0018833C /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = TapDance/MyoKit.framework; sourceTree = "<group>"; };
+		F03F930E19E0E7630018833C /* TDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLoginViewController.h; sourceTree = "<group>"; };
+		F03F930F19E0E7630018833C /* TDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLoginViewController.m; sourceTree = "<group>"; };
 		F0AA414519E0904400541681 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F0AA414719E0921700541681 /* TDGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDGameViewController.h; path = "View Controllers/TDGameViewController.h"; sourceTree = "<group>"; };
-		F0AA414819E0921700541681 /* TDGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDGameViewController.m; path = "View Controllers/TDGameViewController.m"; sourceTree = "<group>"; };
 		F0BCDCA519E098F90030030B /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		F0FC312219E0CC1000718934 /* TDMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMove.h; sourceTree = "<group>"; };
-		F0FC312319E0CC1000718934 /* TDMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMove.m; sourceTree = "<group>"; };
-		F0FC312519E0CC3C00718934 /* TDGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDGameScene.h; sourceTree = "<group>"; };
-		F0FC312619E0CC3C00718934 /* TDGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDGameScene.m; sourceTree = "<group>"; };
 		F0FC312819E0D46800718934 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -79,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03F930D19E0E65A0018833C /* MyoKit.framework in Frameworks */,
 				F0FC312919E0D46800718934 /* UIKit.framework in Frameworks */,
 				F0BCDCA619E098F90030030B /* SpriteKit.framework in Frameworks */,
 				F38E60E4F3DF0D6F28D674F6 /* libPods.a in Frameworks */,
@@ -128,11 +140,12 @@
 		8D49BE9B19E04874000E0E44 /* TapDance */ = {
 			isa = PBXGroup;
 			children = (
-				F0FC311E19E0C8A200718934 /* Models */,
-				8D49BEE619E0A2B2000E0E44 /* Views */,
-				F0BCDCA719E099A90030030B /* Scenes */,
-				8D49BED219E0686C000E0E44 /* Cells */,
-				8D49BECE19E06267000E0E44 /* View Controllers */,
+				F03F92E819E0E62F0018833C /* Cells */,
+				F03F92ED19E0E62F0018833C /* Models */,
+				F03F92F019E0E62F0018833C /* Scenes */,
+				F03F92F519E0E62F0018833C /* Util */,
+				F03F92F819E0E62F0018833C /* View */,
+				F03F92FB19E0E62F0018833C /* View Controllers */,
 				8D49BEA019E04874000E0E44 /* AppDelegate.h */,
 				8D49BEA119E04874000E0E44 /* AppDelegate.m */,
 				8D49BEA319E04874000E0E44 /* ViewController.h */,
@@ -172,40 +185,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8D49BECE19E06267000E0E44 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				8D49BECF19E0627E000E0E44 /* TDHomeViewController.h */,
-				8D49BED019E0627E000E0E44 /* TDHomeViewController.m */,
-				F0AA414719E0921700541681 /* TDGameViewController.h */,
-				F0AA414819E0921700541681 /* TDGameViewController.m */,
-			);
-			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		8D49BED219E0686C000E0E44 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				8D49BED319E06887000E0E44 /* TDHomeHeaderTableViewCell.h */,
-				8D49BED419E06887000E0E44 /* TDHomeHeaderTableViewCell.m */,
-				8D49BED719E075DC000E0E44 /* TDHomeSongTableViewCell.h */,
-				8D49BED819E075DC000E0E44 /* TDHomeSongTableViewCell.m */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		8D49BEE619E0A2B2000E0E44 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8D49BEE719E0A2E2000E0E44 /* TDGameView.h */,
-				8D49BEE819E0A2E2000E0E44 /* TDGameView.m */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		E76DA0CD70E6982AB691FA67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F03F930C19E0E65A0018833C /* MyoKit.framework */,
 				F0FC312819E0D46800718934 /* UIKit.framework */,
 				F0BCDCA519E098F90030030B /* SpriteKit.framework */,
 				0C073D2BE761D92DDCA607CD /* libPods.a */,
@@ -213,22 +196,66 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F0BCDCA719E099A90030030B /* Scenes */ = {
+		F03F92E819E0E62F0018833C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F0FC312519E0CC3C00718934 /* TDGameScene.h */,
-				F0FC312619E0CC3C00718934 /* TDGameScene.m */,
+				F03F92E919E0E62F0018833C /* TDHomeHeaderTableViewCell.h */,
+				F03F92EA19E0E62F0018833C /* TDHomeHeaderTableViewCell.m */,
+				F03F92EB19E0E62F0018833C /* TDHomeSongTableViewCell.h */,
+				F03F92EC19E0E62F0018833C /* TDHomeSongTableViewCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F03F92ED19E0E62F0018833C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F03F92EE19E0E62F0018833C /* TDMove.h */,
+				F03F92EF19E0E62F0018833C /* TDMove.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F03F92F019E0E62F0018833C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F03F92F119E0E62F0018833C /* TDGameScene.h */,
+				F03F92F219E0E62F0018833C /* TDGameScene.m */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		F0FC311E19E0C8A200718934 /* Models */ = {
+		F03F92F519E0E62F0018833C /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				F0FC312219E0CC1000718934 /* TDMove.h */,
-				F0FC312319E0CC1000718934 /* TDMove.m */,
+				F03F92F619E0E62F0018833C /* MyoCommunicator.h */,
+				F03F92F719E0E62F0018833C /* MyoCommunicator.m */,
 			);
-			path = Models;
+			path = Util;
+			sourceTree = "<group>";
+		};
+		F03F92F819E0E62F0018833C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F03F92F919E0E62F0018833C /* TDGameView.h */,
+				F03F92FA19E0E62F0018833C /* TDGameView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F03F92FB19E0E62F0018833C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F03F930E19E0E7630018833C /* TDLoginViewController.h */,
+				F03F930F19E0E7630018833C /* TDLoginViewController.m */,
+				F03F92FC19E0E62F0018833C /* TDGameOverTableViewController.h */,
+				F03F92FD19E0E62F0018833C /* TDGameOverTableViewController.m */,
+				F03F92FE19E0E62F0018833C /* TDGameViewController.h */,
+				F03F92FF19E0E62F0018833C /* TDGameViewController.m */,
+				F03F930019E0E62F0018833C /* TDHomeViewController.h */,
+				F03F930119E0E62F0018833C /* TDHomeViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,15 +395,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D49BEA519E04874000E0E44 /* ViewController.m in Sources */,
-				8D49BED519E06887000E0E44 /* TDHomeHeaderTableViewCell.m in Sources */,
+				F03F930719E0E62F0018833C /* MyoCommunicator.m in Sources */,
 				8D49BEA219E04874000E0E44 /* AppDelegate.m in Sources */,
-				8D49BED919E075DC000E0E44 /* TDHomeSongTableViewCell.m in Sources */,
-				8D49BEE919E0A2E2000E0E44 /* TDGameView.m in Sources */,
-				8D49BED119E0627E000E0E44 /* TDHomeViewController.m in Sources */,
+				F03F930519E0E62F0018833C /* TDGameScene.m in Sources */,
 				8D49BE9F19E04874000E0E44 /* main.m in Sources */,
-				F0FC312719E0CC3C00718934 /* TDGameScene.m in Sources */,
-				F0AA414919E0921700541681 /* TDGameViewController.m in Sources */,
-				F0FC312419E0CC1000718934 /* TDMove.m in Sources */,
+				F03F930B19E0E62F0018833C /* TDHomeViewController.m in Sources */,
+				F03F930219E0E62F0018833C /* TDHomeHeaderTableViewCell.m in Sources */,
+				F03F930419E0E62F0018833C /* TDMove.m in Sources */,
+				F03F930819E0E62F0018833C /* TDGameView.m in Sources */,
+				F03F930319E0E62F0018833C /* TDHomeSongTableViewCell.m in Sources */,
+				F03F930A19E0E62F0018833C /* TDGameViewController.m in Sources */,
+				F03F931019E0E7630018833C /* TDLoginViewController.m in Sources */,
+				F03F930919E0E62F0018833C /* TDGameOverTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +529,10 @@
 			baseConfigurationReference = B8149B041618F7BBA42CCF4C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TapDance",
+				);
 				GCC_PREFIX_HEADER = TapDance/PrefixHeader.pch;
 				INFOPLIST_FILE = TapDance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
@@ -512,6 +546,10 @@
 			baseConfigurationReference = 916FAB60087EB0D4FF03415F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TapDance",
+				);
 				GCC_PREFIX_HEADER = TapDance/PrefixHeader.pch;
 				INFOPLIST_FILE = TapDance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "TDHomeViewController.h"
+#import <MyoKit/MyoKit.h>
+#import "MyoCommunicator.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [TLMHub sharedHub];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -38,6 +42,9 @@
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
+    [MyoCommunicator defaultCommunicator];
+    [[TLMHub sharedHub] setApplicationIdentifier:@"guo.lucy.TapDance"];
+    [[TLMHub sharedHub] attachToAdjacent];
     
     return YES;
 }
