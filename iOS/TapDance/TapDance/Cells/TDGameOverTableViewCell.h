@@ -20,10 +20,7 @@
 @property (nonatomic, strong) MDRadialProgressView *goodView;
 @property (nonatomic, strong) MDRadialProgressView *greatView;
 
-@property (nonatomic, strong) UILabel *missedPercent;
-@property (nonatomic, strong) UILabel *averagePercent;
-@property (nonatomic, strong) UILabel *goodPercent;
-@property (nonatomic, strong) UILabel *greatPercent;
+@property (nonatomic, strong) UIButton *doneButton;
 
 
 

@@ -21,6 +21,16 @@
         [self setupAverageView];
         [self setupGoodView];
         [self setupGreatView];
+        
+        _doneButton = [[UIButton alloc] init];
+        [_doneButton.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
+        _doneButton.translatesAutoresizingMaskIntoConstraints = NO;
+        [_doneButton setTitle:@"Done" forState:UIControlStateNormal];
+        [_doneButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.contentView addSubview:_doneButton];
+        
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_doneButton]-15-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_doneButton)]];
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-15-[_doneButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_doneButton)]];
     }
     return self;
 }
