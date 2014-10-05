@@ -45,10 +45,11 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    TDMove *move1 = [[TDMove alloc] initWithDir:LEFT andTime:1];
-    TDMove *move2 = [[TDMove alloc] initWithDir:RIGHT andTime:1];
-    TDMove *move3 = [[TDMove alloc] initWithDir:UP andTime:3];
-    TDMove *move4 = [[TDMove alloc] initWithDir:DOWN andTime:4];
+    TDMove *move1 = [[TDMove alloc] initWithDir:LEFT andTime:1 andLast:NO];
+    TDMove *move2 = [[TDMove alloc] initWithDir:RIGHT andTime:1 andLast:NO];
+    TDMove *move3 = [[TDMove alloc] initWithDir:UP andTime:3 andLast:NO];
+    TDMove *move4 = [[TDMove alloc] initWithDir:DOWN andTime:4 andLast:NO];
+
     NSMutableArray *moves = [[NSMutableArray alloc] initWithObjects:move1, move2, move3, move4, nil];
     TDGameScene *game = [[TDGameScene alloc] initWithViewSize:self.view.frame.size andMoves:moves];
     

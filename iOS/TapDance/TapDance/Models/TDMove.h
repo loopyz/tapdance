@@ -14,8 +14,9 @@ enum DIR {LEFT, RIGHT, UP, DOWN};
 @property enum DIR direction;
 @property BOOL completed;
 @property double time;
+@property BOOL last;
 
-- (id)initWithDir: (enum DIR)direction andTime: (double)time;
+- (id)initWithDir: (enum DIR)direction andTime: (double)time andLast:(bool)last;
 - (void)completeMove;
 - (BOOL)isCompleted;
 - (NSString *)getMoveDirName;
@@ -23,5 +24,6 @@ enum DIR {LEFT, RIGHT, UP, DOWN};
 - (NSValue *)getNodePosition;
 - (NSString *)getNodePicName;
 - (double)getTime;
+- (BOOL)isLast;
 
 @end

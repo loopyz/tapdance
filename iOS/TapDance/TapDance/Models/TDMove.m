@@ -12,13 +12,14 @@
 
 @implementation TDMove
 
-- (id)initWithDir: (enum DIR)direction andTime: (double)time
+- (id)initWithDir: (enum DIR)direction andTime: (double)time andLast:(bool)last
 {
     self = [super init];
     if (self) {
         self.completed = NO;
         self.direction = direction;
         self.time = time;
+        self.last = last;
     }
     return self;
 }
@@ -83,6 +84,11 @@
 - (double)getTime
 {
     return self.time;
+}
+
+- (BOOL)isLast
+{
+    return self.last;
 }
 
 @end

@@ -10,6 +10,9 @@
 #import "TDHomeViewController.h"
 #import <MyoKit/MyoKit.h>
 #import "MyoCommunicator.h"
+#import "TDConstants.h"
+
+#define FORCE_RESET true
 
 @interface AppDelegate ()
 
@@ -22,6 +25,26 @@
     // Override point for customization after application launch.
     
     [TLMHub sharedHub];
+    
+    // keep track of score
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (FORCE_RESET) {
+        [defaults removeObjectForKey:kTDHasBeenLaunchedKey];
+    }
+    
+    if (![defaults boolForKey:kTDHasBeenLaunchedKey]) {
+        // reset defaults
+        [defaults removeObjectForKey:kTDScoreKey];
+        [defaults removeObjectForKey:kTDPersonKey];
+        [defaults setBool:YES forKey:kTDHasBeenLaunchedKey];
+    }
+    
+    // TEMPORARY:
+    if (FORCE_RESET) {
+        [defaults setValue:@"Nive Jayasekar" forKey:kTDPersonKey];
+    }
+
+    [defaults synchronize];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.

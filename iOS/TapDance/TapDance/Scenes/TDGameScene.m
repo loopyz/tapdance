@@ -9,6 +9,7 @@
 #import "TDGameScene.h"
 
 #import "TDMove.h"
+#import "TDConstants.h"
 
 @interface TDGameScene ()
 
@@ -75,6 +76,13 @@
     [node runAction:moveSeq completion:^{
         if ([move isCompleted]) {
             self.score += 1;
+        }
+        
+        if ([move isLast]) {
+            // do end move-y stuff
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setInteger:([defaults integerForKey:kTDScoreKey]+1) forKey:kTDScoreKey];
+            [defaults synchronize];
         }
     }];
     return node;

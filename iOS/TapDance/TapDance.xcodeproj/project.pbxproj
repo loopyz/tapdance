@@ -25,6 +25,8 @@
 		F03F930B19E0E62F0018833C /* TDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F930119E0E62F0018833C /* TDHomeViewController.m */; };
 		F03F930D19E0E65A0018833C /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03F930C19E0E65A0018833C /* MyoKit.framework */; };
 		F03F931019E0E7630018833C /* TDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F930F19E0E7630018833C /* TDLoginViewController.m */; };
+		F03F931619E0EDEA0018833C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03F931419E0EDA80018833C /* Foundation.framework */; };
+		F03F931919E0EFC90018833C /* TDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F931819E0EFC90018833C /* TDConstants.m */; };
 		F0AA414619E0904400541681 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AA414519E0904400541681 /* Default-568h@2x.png */; };
 		F0BCDCA619E098F90030030B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BCDCA519E098F90030030B /* SpriteKit.framework */; };
 		F0FC312919E0D46800718934 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC312819E0D46800718934 /* UIKit.framework */; };
@@ -80,6 +82,9 @@
 		F03F930C19E0E65A0018833C /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = TapDance/MyoKit.framework; sourceTree = "<group>"; };
 		F03F930E19E0E7630018833C /* TDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLoginViewController.h; sourceTree = "<group>"; };
 		F03F930F19E0E7630018833C /* TDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLoginViewController.m; sourceTree = "<group>"; };
+		F03F931419E0EDA80018833C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F03F931719E0EFC90018833C /* TDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDConstants.h; sourceTree = "<group>"; };
+		F03F931819E0EFC90018833C /* TDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDConstants.m; sourceTree = "<group>"; };
 		F0AA414519E0904400541681 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F0BCDCA519E098F90030030B /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		F0FC312819E0D46800718934 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -90,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03F931619E0EDEA0018833C /* Foundation.framework in Frameworks */,
 				F03F930D19E0E65A0018833C /* MyoKit.framework in Frameworks */,
 				F0FC312919E0D46800718934 /* UIKit.framework in Frameworks */,
 				F0BCDCA619E098F90030030B /* SpriteKit.framework in Frameworks */,
@@ -188,6 +194,7 @@
 		E76DA0CD70E6982AB691FA67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F03F931419E0EDA80018833C /* Foundation.framework */,
 				F03F930C19E0E65A0018833C /* MyoKit.framework */,
 				F0FC312819E0D46800718934 /* UIKit.framework */,
 				F0BCDCA519E098F90030030B /* SpriteKit.framework */,
@@ -230,6 +237,8 @@
 			children = (
 				F03F92F619E0E62F0018833C /* MyoCommunicator.h */,
 				F03F92F719E0E62F0018833C /* MyoCommunicator.m */,
+				F03F931719E0EFC90018833C /* TDConstants.h */,
+				F03F931819E0EFC90018833C /* TDConstants.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -398,6 +407,7 @@
 				F03F930719E0E62F0018833C /* MyoCommunicator.m in Sources */,
 				8D49BEA219E04874000E0E44 /* AppDelegate.m in Sources */,
 				F03F930519E0E62F0018833C /* TDGameScene.m in Sources */,
+				F03F931919E0EFC90018833C /* TDConstants.m in Sources */,
 				8D49BE9F19E04874000E0E44 /* main.m in Sources */,
 				F03F930B19E0E62F0018833C /* TDHomeViewController.m in Sources */,
 				F03F930219E0E62F0018833C /* TDHomeHeaderTableViewCell.m in Sources */,
