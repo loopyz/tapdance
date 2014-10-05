@@ -1,8 +1,10 @@
 PODS:
   - APParallaxHeader (0.1.6)
+  - MDRadialProgress (1.2.0)
 
 DEPENDENCIES:
   - APParallaxHeader (from `https://github.com/loopyz/APParallaxHeader.git`)
+  - MDRadialProgress
 
 EXTERNAL SOURCES:
   APParallaxHeader:
@@ -10,5 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   APParallaxHeader: 5369815639059caa4e195a178c020f8e2b998336
+  MDRadialProgress: be7157dc4ac6b44a3431ac2697e98316e2ca7330
 
 COCOAPODS: 0.34.1

@@ -38,7 +38,6 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
         
         [self.tableView addParallaxWithImage:nil andHeight:70];
         [self.tableView.parallaxView setDelegate:self];
-        [self.tableView addBlackOverlayToParallaxView];
         [self.tableView.parallaxView.imageView setImage:[UIImage imageNamed:@"HomeHeader"]];
         
     }
