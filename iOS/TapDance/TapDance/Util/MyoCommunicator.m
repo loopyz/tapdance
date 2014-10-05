@@ -128,6 +128,20 @@ const char *strings[] = {"CENTER", "UP", "DOWN", "LEFT", "RIGHT"};
 }
 
 - (direction) predictStep {
+    NSLog(@"%f %f %f", _velocity.x, _velocity.y, _velocity.z);
+    if (fabs(_velocity.y) > 2 * fabs(_velocity.z)) {
+        if (_velocity.y < 0.0)
+            return RIGHT;
+        else
+            return LEFT;
+    } else {
+        if (_velocity.z < 0.0) {
+            return DOWN;
+            
+        } else {
+            return UP;
+        }
+    }
     NSDictionary *data = _model[_direction];
     NSArray *matrix = data[@"matrix"];
     NSArray *mean = data[@"mean"];
@@ -137,22 +151,29 @@ const char *strings[] = {"CENTER", "UP", "DOWN", "LEFT", "RIGHT"};
                 _yaw, _pitch, _roll,
                 _velocity.x, _velocity.y, _velocity.z,
                 _rotational.x, _rotational.y, _rotational.z};
+    NSLog(@"%f %f %f %f %f %f %f %f %f %f %f %f %f %f %f", _acceleration.x, _acceleration.y, _acceleration.z,
+          _angular.x, _angular.y, _angular.z,
+          _yaw, _pitch, _roll,
+          _velocity.x, _velocity.y, _velocity.z,
+          _rotational.x, _rotational.y, _rotational.z);
     for (int i = 0; i < 15; i++) {
         newData[i] -= [[mean objectAtIndex:i] floatValue];
-        newData[i] /= [[std objectAtIndex:i] floatValue];
+        float std_ = [[std objectAtIndex:i] floatValue];
+        newData[i] /= std_ * std_;
     }
     NSMutableArray *intercept = [NSMutableArray arrayWithArray:data[@"intercept"]];
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
             NSNumber *result = [NSNumber numberWithFloat:
                                 newData[j] * [[[matrix objectAtIndex:i] objectAtIndex:j] floatValue]];
-            [intercept setObject:result atIndexedSubscript:i];
+            [intercept replaceObjectAtIndex:i withObject:result];
         }
     }
+    NSLog(@"%@", intercept);
     int index = 0;
     float bigFloat = -100000000.0f;
     for (int i = 0; i < 5; i++) {
-        if (i != 3 && [[intercept objectAtIndex:i] floatValue] > bigFloat) {
+        if ([[intercept objectAtIndex:i] floatValue] > bigFloat) {
             bigFloat = [[intercept objectAtIndex:i] floatValue];
             index = i;
         }
