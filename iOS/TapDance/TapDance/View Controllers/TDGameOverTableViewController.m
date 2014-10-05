@@ -26,6 +26,7 @@ static NSString *TDGameOverCellIdentifier = @"TDGameOverTableViewCell";
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         self.tableView.backgroundColor = UIColorFromRGB(0x03193B);
         [self.tableView registerClass:[TDGameOverTableViewCell class] forCellReuseIdentifier:TDGameOverCellIdentifier];
+
     }
     return self;
 }
@@ -41,6 +42,18 @@ static NSString *TDGameOverCellIdentifier = @"TDGameOverTableViewCell";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+
+}
+
+- (void)didTapDone {
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,6 +87,8 @@ static NSString *TDGameOverCellIdentifier = @"TDGameOverTableViewCell";
     _gameOverCell.greatView.progressCounter = 1;
     
     _gameOverCell.gradeLabel.text = @"A-";
+    [_gameOverCell.doneButton addTarget:self action:@selector(didTapDone) forControlEvents:UIControlEventTouchUpInside];
+    
     return _gameOverCell;
 }
 

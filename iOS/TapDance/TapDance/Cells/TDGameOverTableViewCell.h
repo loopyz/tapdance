@@ -20,6 +20,8 @@
 @property (nonatomic, strong) MDRadialProgressView *goodView;
 @property (nonatomic, strong) MDRadialProgressView *greatView;
 
+@property (nonatomic, strong) UIButton *doneButton;
+
 
 
 @end

@@ -13,6 +13,7 @@
 #import "TDMove.h"
 
 #import <SpriteKit/SpriteKit.h>
+#import "AFSoundManager.h"
 
 @interface TDGameViewController ()
 
@@ -33,8 +34,17 @@
         _gameView = [[TDGameView alloc] init];
         
         self.view = _gameView;
+        
+        [self playMusic];
     }
     return self;
+}
+
+- (void)playMusic {
+    [[AFSoundManager sharedManager]startPlayingLocalFileWithName:@"LaffyTaffy.mp3" andBlock:^(int percentage, CGFloat elapsedTime, CGFloat timeRemaining, NSError *error, BOOL finished) {
+        NSLog(@"Playing music now?!?");
+
+    }];
 }
 
 - (void)viewDidLoad

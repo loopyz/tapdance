@@ -3,4 +3,5 @@ workspace 'TapDance'
 platform :ios, "7.1"
 pod 'APParallaxHeader', git: "https://github.com/loopyz/APParallaxHeader.git"
 pod 'MDRadialProgress'
+pod 'AFSoundManager'
 
