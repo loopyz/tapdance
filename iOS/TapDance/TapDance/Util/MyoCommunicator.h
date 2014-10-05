@@ -24,11 +24,15 @@ typedef enum {
 @property GLKVector3 acceleration;
 @property GLKVector3 gravity;
 @property GLKVector3 angular;
+@property GLKVector3 velocity;
+@property GLKVector3 rotational;
 @property NSArray *model;
 @property float yaw;
 @property float pitch;
 @property float roll;
 @property direction direction;
 @property NSDate *lastImpactTime;
+@property NSDate *lastAccelTime;
+@property NSDate *lastRotateTime;
 
 @end
