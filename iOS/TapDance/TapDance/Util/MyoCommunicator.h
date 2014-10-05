@@ -11,10 +11,10 @@
 
 typedef enum {
     CENTER = 0,
-    UP = 1,
-    DOWN = 2,
-    LEFT = 3,
-    RIGHT = 4} direction;
+    UPx = 1,
+    DOWNx = 2,
+    LEFTx = 3,
+    RIGHTx = 4} direction;
 
 @interface MyoCommunicator : NSObject
 

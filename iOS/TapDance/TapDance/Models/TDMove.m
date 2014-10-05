@@ -7,6 +7,9 @@
 //
 
 #import "TDMove.h"
+#import "MyoCommunicator.h"
+
+#define RAND_PRECISION 1024
 
 @implementation TDMove
 
@@ -33,6 +36,26 @@
 
 - (BOOL)isCompleted
 {
+    int direction = [[MyoCommunicator defaultCommunicator] objectForKey:@"direction"];
+    int prob = 0.7;
+    float x = arc4random_uniform(RAND_PRECISION) / (float)RAND_PRECISION;
+    if (x < prob) {
+        [self completeMove];
+        self.score = 3;
+    } else if ((self.direction == UP) && (direction == UPx)) {
+        [self completeMove];
+        self.score = 5;
+    } else if ((self.direction == DOWN) && (direction == DOWNx)) {
+        [self completeMove];
+        self.score = 5;
+    } else if ((self.direction == RIGHT) && (direction == RIGHTx)) {
+        [self completeMove];
+        self.score = 5;
+    } else if ((self.direction == LEFT) && (direction == LEFTx)) {
+        [self completeMove];
+        self.score = 5;
+    }
+
     return self.completed;
 }
 
