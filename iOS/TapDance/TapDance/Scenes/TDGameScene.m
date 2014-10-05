@@ -149,8 +149,10 @@
                     [self.goodText runAction:missedSeq];
                 } else {
                     [self.goodText runAction:tmppause completion:^{
+                        if (!self.goodText.parent) {
                         [self addChild:self.goodText];
                         [self.goodText runAction:missedSeq];
+                        }
                     }];
                 }
             } else if (move.score >= 4) {
@@ -160,8 +162,10 @@
                     [self.greatText runAction:missedSeq];
                 } else {
                     [self.greatText runAction:tmppause completion:^{
-                        [self addChild:self.greatText];
-                        [self.greatText runAction:missedSeq];
+                        if (!self.greatText.parent) {
+                            [self addChild:self.greatText];
+                            [self.greatText runAction:missedSeq];
+                        }
                     }];
                 }
             }
@@ -185,8 +189,10 @@
                 [self.missedText runAction:missedSeq];
             } else {
                 [self.missedText runAction:remove completion:^{
+                    if (!self.missedText.parent) {
                     [self addChild:self.missedText];
                     [self.missedText runAction:missedSeq];
+                    }
                 }];
             }
         }

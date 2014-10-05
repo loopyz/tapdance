@@ -131,15 +131,15 @@ const char *strings[] = {"CENTER", "UP", "DOWN", "LEFT", "RIGHT"};
     NSLog(@"%f %f %f", _velocity.x, _velocity.y, _velocity.z);
     if (fabs(_velocity.y) > 2 * fabs(_velocity.z)) {
         if (_velocity.y < 0.0)
-            return RIGHT;
+            return RIGHTx;
         else
-            return LEFT;
+            return LEFTx;
     } else {
         if (_velocity.z < 0.0) {
-            return DOWN;
+            return DOWNx;
             
         } else {
-            return UP;
+            return UPx;
         }
     }
     NSDictionary *data = _model[_direction];

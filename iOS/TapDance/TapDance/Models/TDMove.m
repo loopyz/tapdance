@@ -36,9 +36,15 @@
 
 - (BOOL)isCompleted
 {
-    int direction = [[MyoCommunicator defaultCommunicator] objectForKey:@"direction"];
+    NSDictionary *mostRecent = [[MyoCommunicator defaultCommunicator] mostRecent];
+    int direction = [[mostRecent objectForKey:@"direction"] intValue];
+    NSTimeInterval difference = [[NSDate date] timeIntervalSinceDate:mostRecent[@"timestamp"]];
     int prob = 0.7;
     float x = arc4random_uniform(RAND_PRECISION) / (float)RAND_PRECISION;
+    
+    if (difference >= 0.5) {
+        return NO;
+    }
     if (x < prob) {
         [self completeMove];
         self.score = 3;
