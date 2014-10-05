@@ -107,4 +107,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)removeNotificationCenterObserver
+{
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter removeObserver:self];
+}
+
+- (void)dealloc
+{
+    [self performSelectorOnMainThread:@selector(removeNotificationCenterObserver) withObject:self waitUntilDone:YES];
+}
+
 @end

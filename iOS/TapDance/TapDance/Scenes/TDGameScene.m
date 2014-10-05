@@ -20,6 +20,7 @@
 @property NSInteger misses;
 @property NSInteger good;
 @property NSInteger great;
+@property BOOL endedGame;
 
 @property(strong, nonatomic) SKSpriteNode *left;
 @property(strong, nonatomic) SKSpriteNode *right;
@@ -41,7 +42,7 @@
         self.misses = 0;
         self.good = 0;
         self.great = 0;
-        
+        self.endedGame = NO;
         // subscribing to early end notification
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endGame:) name:kTDEarlyEndToSceneNotification object:nil];
     }
@@ -146,6 +147,10 @@
 
 - (void)endGame:(NSNotification *)notification
 {
+    if (self.endedGame) {
+        return;
+    }
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:([defaults integerForKey:kTDScoreKey]+self.score) forKey:kTDScoreKey];
     
@@ -157,6 +162,17 @@
     [defaults setInteger:self.great forKey:kTDCurrentGameGreatKey];
     
     [defaults synchronize];
+}
+
+- (void)removeNotificationCenterObserver
+{
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter removeObserver:self];
+}
+
+- (void)dealloc
+{
+    [self performSelectorOnMainThread:@selector(removeNotificationCenterObserver) withObject:self waitUntilDone:YES];
 }
 
 @end
