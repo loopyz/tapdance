@@ -16,6 +16,7 @@ enum DIR {LEFT, RIGHT, UP, DOWN};
 @property BOOL completed;
 @property double time;
 @property BOOL last;
+@property NSInteger score;
 
 - (id)initWithDir: (enum DIR)direction andTime: (double)time andLast:(bool)last;
 - (void)completeMove;

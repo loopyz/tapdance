@@ -24,7 +24,11 @@
 
 - (void)completeMove
 {
-    self.completed = YES;
+    if (!self.completed) {
+        self.completed = YES;
+        // TODO: set score with myo -- based on some nearness thing
+        self.score = 1;
+    }
 }
 
 - (BOOL)isCompleted

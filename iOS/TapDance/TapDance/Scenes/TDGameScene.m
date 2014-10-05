@@ -103,7 +103,7 @@
             [move completeMove];
         }
         if ([move isCompleted]) {
-            self.score += 1;
+            self.score += move.score;
             SKAction *fadeAway = [SKAction fadeOutWithDuration: 0.25];
             SKAction *remove = [SKAction removeFromParent];
             SKAction *closeSeq = [SKAction sequence:@[fadeAway, remove]];
@@ -117,7 +117,7 @@
         if ([move isLast]) {
             // do end move-y stuff
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            [defaults setInteger:([defaults integerForKey:kTDScoreKey]+1) forKey:kTDScoreKey];
+            [defaults setInteger:([defaults integerForKey:kTDScoreKey]+self.score) forKey:kTDScoreKey];
             [defaults synchronize];
         }
     }];
