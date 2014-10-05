@@ -11,10 +11,21 @@
 @interface GameScene ()
 
 @property BOOL contentCreated;
+@property CGSize viewsize;
 
 @end
 
 @implementation GameScene
+
+- (id) initWithViewSize: (CGSize)size
+{
+    self = [super initWithSize:size];
+    if (self)
+    {
+        self.viewsize = size;
+    }
+    return self;
+}
 
 - (void)didMoveToView:(SKView *)view
 {
@@ -27,15 +38,21 @@
 
 - (void)createSceneContents
 {
-    self.backgroundColor = [SKColor blueColor];
+//    self.backgroundColor = [UIColor blueColor];
     //self.scaleMode = SKSceneScaleModeAspectFit;
+    [self addChild:[self createBackground]];
     [self addChild: [self createLabel:@"Hello"]];
 }
 
+- (SKSpriteNode *)createBackground
+{
+    SKSpriteNode *bg = [SKSpriteNode spriteNodeWithImageNamed:@"GameBG"];
+    bg.position = CGPointMake(self.viewsize.width/2, self.viewsize.height/2);
+    return bg;
+}
 - (SKSpriteNode *)createLabel: (NSString *)text
 {
-    CGSize viewsize = self.view.bounds.size;
-    CGSize size = CGSizeMake(viewsize.width/2, viewsize.height/2);
+    CGSize size = CGSizeMake(self.viewsize.width/2, self.viewsize.height/2);
     SKSpriteNode *node = [[SKSpriteNode alloc] initWithColor:[UIColor brownColor] size:size];
     node.position = CGPointMake(CGRectGetMidX(self.frame),CGRectGetMidY(self.frame));
     node.name = text;
