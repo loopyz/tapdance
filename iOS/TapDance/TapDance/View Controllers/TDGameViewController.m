@@ -21,12 +21,13 @@
 @interface TDGameViewController ()
 
 @property (nonatomic, strong) TDGameView *gameView;
+@property (nonatomic, strong) NSArray *songs;
 
 @end
 
 @implementation TDGameViewController
 
-- (id)initWithGameId: (NSString *)gameId
+- (id)initWithGameId: (NSInteger)gameId
 {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
@@ -42,6 +43,8 @@
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(respondToNotification:) name:kTDEarlyEndToCtrlNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(respondToNotification:) name:kTDUpdateCurrentGameScoreNotification object:nil];
+        
+        _songs = @[@"LaffyTaffy.mp3", @"shakeitoff.mp3", @"whatdoesthefoxsay.mp3", @"nyancat.mp3", @"rednose.mp3", @"closer.mp3", @"clarity.mp3", @"dieyoung.mp3", @"wecantstop.mp3", @"talkdirtytome.mp3"];
         
         [self playMusic];
     }
@@ -75,7 +78,7 @@
 }
 
 - (void)playMusic {
-    [[AFSoundManager sharedManager]startPlayingLocalFileWithName:@"LaffyTaffy.mp3" andBlock:^(int percentage, CGFloat elapsedTime, CGFloat timeRemaining, NSError *error, BOOL finished) {
+    [[AFSoundManager sharedManager]startPlayingLocalFileWithName:_songs[self.gameId] andBlock:^(int percentage, CGFloat elapsedTime, CGFloat timeRemaining, NSError *error, BOOL finished) {
         NSLog(@"Playing music now?!?");
     }];
 }

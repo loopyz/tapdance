@@ -124,7 +124,7 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%d", (int)indexPath.row]];
+    TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:indexPath.row];
     // TDGameOverTableViewController *gvc = [[TDGameOverTableViewController alloc] initWithStyle:UITableViewStylePlain];
     [self.navigationController pushViewController:gvc animated:YES];
     // [self presentViewController:gvc animated:YES completion:nil];
