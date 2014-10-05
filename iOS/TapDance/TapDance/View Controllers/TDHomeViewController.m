@@ -85,7 +85,7 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         _headerCell.nameLabel.text = [defaults stringForKey:kTDPersonKey];
-        _headerCell.pointsLabel.text = [NSString stringWithFormat:@"Points: %d", [defaults integerForKey:kTDScoreKey]];
+        _headerCell.pointsLabel.text = [NSString stringWithFormat:@"Points: %ld", [defaults integerForKey:kTDScoreKey]];
         
         return _headerCell;
     } else if (indexPath.section == TDSongSection) {
@@ -101,17 +101,11 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 1) {
-        TLMSettingsViewController *settings = [[TLMSettingsViewController alloc] init];
-        [self.navigationController pushViewController:settings animated:YES];
-    } else if (indexPath.row == 2){
-        TDGameOverTableViewController *gvc = [[TDGameOverTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        [self.navigationController pushViewController:gvc animated:YES];
-    } else {
-        TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%d",indexPath.row]];
-        [self.navigationController pushViewController:gvc animated:YES];
-    }
-   }
+    // TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%d", indexPath.row]];
+    TDGameOverTableViewController *gvc = [[TDGameOverTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    // [self.navigationController pushViewController:gvc animated:YES];
+    [self presentViewController:gvc animated:YES completion:nil];
+}
 
 - (BOOL)prefersStatusBarHidden {
     return YES;

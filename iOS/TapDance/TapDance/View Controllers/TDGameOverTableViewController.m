@@ -7,24 +7,34 @@
 //
 
 #import "TDGameOverTableViewController.h"
+#import "TDGameOverTableViewCell.h"
 
 @interface TDGameOverTableViewController ()
+
+@property (nonatomic, strong) TDGameOverTableViewCell *gameOverCell;
 
 @end
 
 @implementation TDGameOverTableViewController
 
+static NSString *TDGameOverCellIdentifier = @"TDGameOverTableViewCell";
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        self.tableView.backgroundColor = UIColorFromRGB(0x03193B);
+        [self.tableView registerClass:[TDGameOverTableViewCell class] forCellReuseIdentifier:TDGameOverCellIdentifier];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES
+                                            withAnimation:UIStatusBarAnimationFade];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -38,72 +48,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableView Delegate Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.tableView.frame.size.height;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    _gameOverCell = [self.tableView dequeueReusableCellWithIdentifier:TDGameOverCellIdentifier];
+    _gameOverCell.missesView.progressTotal = 7;
+    _gameOverCell.missesView.progressCounter = 3;
+    _gameOverCell.averageView.progressCounter = 3;
+    _gameOverCell.averageView.progressTotal = 7;
+    _gameOverCell.goodView.progressCounter = 5;
+    _gameOverCell.goodView.progressTotal = 7;
+    _gameOverCell.greatView.progressTotal = 7;
+    _gameOverCell.greatView.progressCounter = 1;
     
-    // Configure the cell...
+    _gameOverCell.gradeLabel.text = @"A-";
     
-    return cell;
+    return _gameOverCell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
+- (BOOL)prefersStatusBarHidden {
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
