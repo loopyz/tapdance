@@ -24,6 +24,16 @@
                                                    object:nil];
         
         [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(didReceiveOrientationEvent:)
+                                                     name:TLMMyoDidReceiveOrientationEventNotification
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(didReceiveGyroscopeEvent:)
+                                                     name:TLMMyoDidReceiveGyroscopeEventNotification
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didConnectDevice:)
                                                      name:TLMHubDidConnectDeviceNotification
                                                    object:nil];
@@ -34,7 +44,7 @@
 - (void) didReceiveAccelerometerEvent: (NSNotification*) notification {
     TLMAccelerometerEvent *event = notification.userInfo[kTLMKeyAccelerometerEvent];
     _acceleration = event.vector;
-    NSDate *timestamp = event.timestamp;
+    NSDate *timestamp = [NSDate date];
     
     float alpha = 0.8;
     _gravity = GLKVector3Make(alpha * _gravity.x + (1-alpha) * _acceleration.x,
@@ -54,6 +64,23 @@
         
        NSLog(@"accel: %f, %f, %f", _acceleration.x, _acceleration.y, _acceleration.z);
     }
+}
+
+- (void) didReceiveOrientationEvent: (NSNotification*) notification {
+    TLMOrientationEvent *event = notification.userInfo[kTLMKeyOrientationEvent];
+    GLKQuaternion quat = event.quaternion;
+    
+    _roll = atan2(2.0f * (quat.w * quat.x + quat.y * quat.z),
+                 1.0f - 2.0f * (quat.x * quat.x + quat.y * quat.y));
+    _pitch = asin(2.0f * (quat.w * quat.y - quat.z * quat.x));
+    _yaw = atan2(2.0f * (quat.w * quat.z + quat.x * quat.y),
+                1.0f - 2.0f * (quat.y * quat.y + quat.z * quat.z));
+
+}
+
+- (void) didReceiveGyroscopeEvent: (NSNotification*) notification {
+    TLMGyroscopeEvent *event = notification.userInfo[kTLMKeyGyroscopeEvent];
+    _angular = event.vector;
 }
 
 - (void) didConnectDevice: (NSNotification*) notification {
