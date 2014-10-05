@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "TDHomeViewController.h"
 #import <MyoKit/MyoKit.h>
+#import "MyoCommunicator.h"
 
 @interface AppDelegate ()
 
@@ -39,7 +40,9 @@
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
-    [TLMHub sharedHub];
+    [MyoCommunicator defaultCommunicator];
+    [[TLMHub sharedHub] setApplicationIdentifier:@"guo.lucy.TapDance"];
+    [[TLMHub sharedHub] attachToAdjacent];
     
     return YES;
 }

@@ -11,6 +11,8 @@
 #import "TDHomeHeaderTableViewCell.h"
 #import "TDHomeSongTableViewCell.h"
 #import "TDGameViewController.h"
+#import "MyoCommunicator.h"
+#import <MyoKit/MyoKit.h>
 
 @interface TDHomeViewController()<APParallaxViewDelegate>
 
@@ -94,8 +96,13 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%d", indexPath.row]];
-    [self.navigationController pushViewController:gvc animated:YES];
+    if (indexPath.row == 1) {
+        TLMSettingsViewController *settings = [[TLMSettingsViewController alloc] init];
+        [self.navigationController pushViewController:settings animated:YES];
+    } else {
+        TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%d", indexPath.row]];
+        [self.navigationController pushViewController:gvc animated:YES];
+    }
 }
 
 - (BOOL)prefersStatusBarHidden {
