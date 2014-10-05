@@ -18,6 +18,8 @@
 		8D49BED519E06887000E0E44 /* TDHomeHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED419E06887000E0E44 /* TDHomeHeaderTableViewCell.m */; };
 		8D49BED919E075DC000E0E44 /* TDHomeSongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED819E075DC000E0E44 /* TDHomeSongTableViewCell.m */; };
 		8D49BEE919E0A2E2000E0E44 /* TDGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BEE819E0A2E2000E0E44 /* TDGameView.m */; };
+		A8E3CB6F19E0C81600C89C22 /* MyoCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E3CB6E19E0C81600C89C22 /* MyoCommunicator.m */; };
+		A8E3CB7119E0C9F200C89C22 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E3CB7019E0C9F200C89C22 /* MyoKit.framework */; };
 		F0AA414619E0904400541681 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AA414519E0904400541681 /* Default-568h@2x.png */; };
 		F0AA414919E0921700541681 /* TDGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA414819E0921700541681 /* TDGameViewController.m */; };
 		F0BCDCA619E098F90030030B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BCDCA519E098F90030030B /* SpriteKit.framework */; };
@@ -60,6 +62,9 @@
 		8D49BEE719E0A2E2000E0E44 /* TDGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDGameView.h; path = View/TDGameView.h; sourceTree = "<group>"; };
 		8D49BEE819E0A2E2000E0E44 /* TDGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDGameView.m; path = View/TDGameView.m; sourceTree = "<group>"; };
 		916FAB60087EB0D4FF03415F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A8E3CB6D19E0C81600C89C22 /* MyoCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyoCommunicator.h; sourceTree = "<group>"; };
+		A8E3CB6E19E0C81600C89C22 /* MyoCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyoCommunicator.m; sourceTree = "<group>"; };
+		A8E3CB7019E0C9F200C89C22 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = TapDance/MyoKit.framework; sourceTree = "<group>"; };
 		B8149B041618F7BBA42CCF4C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F0AA414519E0904400541681 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F0AA414719E0921700541681 /* TDGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDGameViewController.h; path = "View Controllers/TDGameViewController.h"; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E3CB7119E0C9F200C89C22 /* MyoKit.framework in Frameworks */,
 				F0BCDCA619E098F90030030B /* SpriteKit.framework in Frameworks */,
 				F38E60E4F3DF0D6F28D674F6 /* libPods.a in Frameworks */,
 			);
@@ -122,6 +128,7 @@
 		8D49BE9B19E04874000E0E44 /* TapDance */ = {
 			isa = PBXGroup;
 			children = (
+				A8E3CB6C19E0C7EB00C89C22 /* Util */,
 				8D49BEE619E0A2B2000E0E44 /* Views */,
 				F0BCDCA719E099A90030030B /* Scenes */,
 				8D49BED219E0686C000E0E44 /* Cells */,
@@ -196,9 +203,19 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		A8E3CB6C19E0C7EB00C89C22 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A8E3CB6D19E0C81600C89C22 /* MyoCommunicator.h */,
+				A8E3CB6E19E0C81600C89C22 /* MyoCommunicator.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		E76DA0CD70E6982AB691FA67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A8E3CB7019E0C9F200C89C22 /* MyoKit.framework */,
 				F0BCDCA519E098F90030030B /* SpriteKit.framework */,
 				0C073D2BE761D92DDCA607CD /* libPods.a */,
 			);
@@ -356,6 +373,7 @@
 				8D49BED919E075DC000E0E44 /* TDHomeSongTableViewCell.m in Sources */,
 				8D49BEE919E0A2E2000E0E44 /* TDGameView.m in Sources */,
 				8D49BED119E0627E000E0E44 /* TDHomeViewController.m in Sources */,
+				A8E3CB6F19E0C81600C89C22 /* MyoCommunicator.m in Sources */,
 				8D49BE9F19E04874000E0E44 /* main.m in Sources */,
 				F0BCDCAA19E099C70030030B /* GameScene.m in Sources */,
 				F0AA414919E0921700541681 /* TDGameViewController.m in Sources */,
@@ -481,6 +499,10 @@
 			baseConfigurationReference = B8149B041618F7BBA42CCF4C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TapDance",
+				);
 				GCC_PREFIX_HEADER = TapDance/PrefixHeader.pch;
 				INFOPLIST_FILE = TapDance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
@@ -494,6 +516,10 @@
 			baseConfigurationReference = 916FAB60087EB0D4FF03415F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TapDance",
+				);
 				GCC_PREFIX_HEADER = TapDance/PrefixHeader.pch;
 				INFOPLIST_FILE = TapDance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;

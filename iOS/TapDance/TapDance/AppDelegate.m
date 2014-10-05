@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TDHomeViewController.h"
+#import <MyoKit/MyoKit.h>
 
 @interface AppDelegate ()
 
@@ -38,6 +39,7 @@
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
+    [TLMHub sharedHub];
     
     return YES;
 }
