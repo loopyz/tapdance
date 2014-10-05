@@ -12,5 +12,7 @@
 @interface TDGameView : UIView
 
 @property (nonatomic, strong) SKView *skView;
+@property (nonatomic, strong) UIButton *quitButton;
+@property (nonatomic, strong) UILabel *pointsLabel;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "TDGameOverTableViewController.h"
 #import "TDGameOverTableViewCell.h"
+#import "TDHomeViewController.h"
 
 @interface TDGameOverTableViewController ()
 
@@ -52,7 +53,8 @@ static NSString *TDGameOverCellIdentifier = @"TDGameOverTableViewCell";
 }
 
 - (void)didTapDone {
-    [self.navigationController popToRootViewControllerAnimated:NO];
+    // [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController pushViewController:[[TDHomeViewController alloc] init] animated:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

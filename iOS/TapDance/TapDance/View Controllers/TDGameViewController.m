@@ -14,6 +14,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "AFSoundManager.h"
+#import "TDGameOverTableViewController.h"
 
 @interface TDGameViewController ()
 
@@ -32,6 +33,8 @@
         
         self.gameId = gameId;
         _gameView = [[TDGameView alloc] init];
+        [_gameView.quitButton addTarget:self action:@selector(quitButtonTouched) forControlEvents:UIControlEventTouchUpInside];
+        _gameView.pointsLabel.text = @"Points: 332";
         
         self.view = _gameView;
         
@@ -40,10 +43,15 @@
     return self;
 }
 
+- (void)quitButtonTouched {
+    [[AFSoundManager sharedManager] stop];
+    TDGameOverTableViewController *gotvc = [[TDGameOverTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self presentViewController:gotvc animated:YES completion:nil];
+}
+
 - (void)playMusic {
     [[AFSoundManager sharedManager]startPlayingLocalFileWithName:@"LaffyTaffy.mp3" andBlock:^(int percentage, CGFloat elapsedTime, CGFloat timeRemaining, NSError *error, BOOL finished) {
         NSLog(@"Playing music now?!?");
-
     }];
 }
 
