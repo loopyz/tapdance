@@ -19,10 +19,12 @@ typedef enum {
 @interface MyoCommunicator : NSObject
 
 + (id) defaultCommunicator;
+- (NSDictionary *) mostRecent;
 
 @property GLKVector3 acceleration;
 @property GLKVector3 gravity;
 @property GLKVector3 angular;
+@property NSArray *model;
 @property float yaw;
 @property float pitch;
 @property float roll;

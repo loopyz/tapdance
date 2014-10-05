@@ -25,6 +25,7 @@
 		8DA93B7919E0C10300F3862C /* TDGameOverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA93B7819E0C10300F3862C /* TDGameOverTableViewController.m */; };
 		8DE9958119E0D40C00C4926D /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE9958019E0D40C00C4926D /* MyoKit.framework */; };
 		8DE9958419E0E4B500C4926D /* TDGameOverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9958319E0E4B500C4926D /* TDGameOverTableViewCell.m */; };
+		A8DAC34419E11AD400E9F5C6 /* model.json in Resources */ = {isa = PBXBuildFile; fileRef = A8DAC34319E11AD400E9F5C6 /* model.json */; };
 		F0AA414619E0904400541681 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AA414519E0904400541681 /* Default-568h@2x.png */; };
 		F0AA414919E0921700541681 /* TDGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA414819E0921700541681 /* TDGameViewController.m */; };
 		F0BCDCA619E098F90030030B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BCDCA519E098F90030030B /* SpriteKit.framework */; };
@@ -79,6 +80,7 @@
 		8DE9958219E0E4B500C4926D /* TDGameOverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDGameOverTableViewCell.h; path = Cells/TDGameOverTableViewCell.h; sourceTree = "<group>"; };
 		8DE9958319E0E4B500C4926D /* TDGameOverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDGameOverTableViewCell.m; path = Cells/TDGameOverTableViewCell.m; sourceTree = "<group>"; };
 		916FAB60087EB0D4FF03415F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A8DAC34319E11AD400E9F5C6 /* model.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = model.json; sourceTree = "<group>"; };
 		B8149B041618F7BBA42CCF4C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F0AA414519E0904400541681 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F0AA414719E0921700541681 /* TDGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDGameViewController.h; path = "View Controllers/TDGameViewController.h"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		8D49BE9B19E04874000E0E44 /* TapDance */ = {
 			isa = PBXGroup;
 			children = (
+				A8DAC34219E11AD400E9F5C6 /* Assets */,
 				8DA128BE19E104E5005D92BE /* Models */,
 				8DA128BA19E104D7005D92BE /* Scenes */,
 				8DA128B319E104B0005D92BE /* Util */,
@@ -249,6 +252,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A8DAC34219E11AD400E9F5C6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A8DAC34319E11AD400E9F5C6 /* model.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		E76DA0CD70E6982AB691FA67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +354,7 @@
 			files = (
 				8D49BEA819E04874000E0E44 /* Main.storyboard in Resources */,
 				F0AA414619E0904400541681 /* Default-568h@2x.png in Resources */,
+				A8DAC34419E11AD400E9F5C6 /* model.json in Resources */,
 				8D49BEAD19E04874000E0E44 /* LaunchScreen.xib in Resources */,
 				8D49BEAA19E04874000E0E44 /* Images.xcassets in Resources */,
 			);
