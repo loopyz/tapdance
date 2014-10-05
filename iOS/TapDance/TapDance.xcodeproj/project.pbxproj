@@ -159,6 +159,7 @@ fi
 			<key>files</key>
 			<array>
 				<string>8D49BEA519E04874000E0E44</string>
+				<string>A8DAC34119E0D59A00E9F5C6</string>
 				<string>8D49BED519E06887000E0E44</string>
 				<string>8D49BEA219E04874000E0E44</string>
 				<string>8DA93B7919E0C10300F3862C</string>
@@ -180,6 +181,7 @@ fi
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
+				<string>A8DAC33D19E0D59200E9F5C6</string>
 				<string>F0BCDCA619E098F90030030B</string>
 				<string>F38E60E4F3DF0D6F28D674F6</string>
 			</array>
@@ -262,6 +264,7 @@ fi
 		<dict>
 			<key>children</key>
 			<array>
+				<string>A8DAC33E19E0D59A00E9F5C6</string>
 				<string>8D49BEE619E0A2B2000E0E44</string>
 				<string>F0BCDCA719E099A90030030B</string>
 				<string>8D49BED219E0686C000E0E44</string>
@@ -788,6 +791,11 @@ fi
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
 				<string>AppIcon</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)/TapDance</string>
+				</array>
 				<key>GCC_PREFIX_HEADER</key>
 				<string>TapDance/PrefixHeader.pch</string>
 				<key>INFOPLIST_FILE</key>
@@ -812,6 +820,11 @@ fi
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
 				<string>AppIcon</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)/TapDance</string>
+				</array>
 				<key>GCC_PREFIX_HEADER</key>
 				<string>TapDance/PrefixHeader.pch</string>
 				<key>INFOPLIST_FILE</key>
@@ -1160,6 +1173,73 @@ fi
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>A8DAC33C19E0D59200E9F5C6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>MyoKit.framework</string>
+			<key>path</key>
+			<string>TapDance/MyoKit.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A8DAC33D19E0D59200E9F5C6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A8DAC33C19E0D59200E9F5C6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A8DAC33E19E0D59A00E9F5C6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A8DAC33F19E0D59A00E9F5C6</string>
+				<string>A8DAC34019E0D59A00E9F5C6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Util</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A8DAC33F19E0D59A00E9F5C6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MyoCommunicator.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A8DAC34019E0D59A00E9F5C6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MyoCommunicator.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A8DAC34119E0D59A00E9F5C6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A8DAC34019E0D59A00E9F5C6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>B8149B041618F7BBA42CCF4C</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1203,6 +1283,7 @@ fi
 		<dict>
 			<key>children</key>
 			<array>
+				<string>A8DAC33C19E0D59200E9F5C6</string>
 				<string>F0BCDCA519E098F90030030B</string>
 				<string>0C073D2BE761D92DDCA607CD</string>
 			</array>
@@ -1347,585 +1428,3 @@ fi
 	<string>8D49BE9119E04874000E0E44</string>
 </dict>
 </plist>
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		8D49BE9F19E04874000E0E44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BE9E19E04874000E0E44 /* main.m */; };
-		8D49BEA219E04874000E0E44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BEA119E04874000E0E44 /* AppDelegate.m */; };
-		8D49BEAA19E04874000E0E44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D49BEA919E04874000E0E44 /* Images.xcassets */; };
-		8D49BEAD19E04874000E0E44 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D49BEAB19E04874000E0E44 /* LaunchScreen.xib */; };
-		8D49BEB919E04875000E0E44 /* TapDanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BEB819E04875000E0E44 /* TapDanceTests.m */; };
-		8D49BED119E0627E000E0E44 /* TDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED019E0627E000E0E44 /* TDHomeViewController.m */; };
-		8D49BED519E06887000E0E44 /* TDHomeHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED419E06887000E0E44 /* TDHomeHeaderTableViewCell.m */; };
-		8D49BED919E075DC000E0E44 /* TDHomeSongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BED819E075DC000E0E44 /* TDHomeSongTableViewCell.m */; };
-		8D49BEE919E0A2E2000E0E44 /* TDGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D49BEE819E0A2E2000E0E44 /* TDGameView.m */; };
-		A8E3CB6F19E0C81600C89C22 /* MyoCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E3CB6E19E0C81600C89C22 /* MyoCommunicator.m */; };
-		A8E3CB7119E0C9F200C89C22 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E3CB7019E0C9F200C89C22 /* MyoKit.framework */; };
-		F0AA414619E0904400541681 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AA414519E0904400541681 /* Default-568h@2x.png */; };
-		F0AA414919E0921700541681 /* TDGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA414819E0921700541681 /* TDGameViewController.m */; };
-		F0BCDCA619E098F90030030B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BCDCA519E098F90030030B /* SpriteKit.framework */; };
-		F0BCDCAA19E099C70030030B /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BCDCA919E099C70030030B /* GameScene.m */; };
-		F38E60E4F3DF0D6F28D674F6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C073D2BE761D92DDCA607CD /* libPods.a */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8D49BEB319E04875000E0E44 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8D49BE9119E04874000E0E44 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D49BE9819E04874000E0E44;
-			remoteInfo = TapDance;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		0C073D2BE761D92DDCA607CD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D49BE9919E04874000E0E44 /* TapDance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapDance.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D49BE9D19E04874000E0E44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D49BE9E19E04874000E0E44 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8D49BEA019E04874000E0E44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8D49BEA119E04874000E0E44 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8D49BEA919E04874000E0E44 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8D49BEAC19E04874000E0E44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		8D49BEB219E04875000E0E44 /* TapDanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapDanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D49BEB719E04875000E0E44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D49BEB819E04875000E0E44 /* TapDanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TapDanceTests.m; sourceTree = "<group>"; };
-		8D49BECF19E0627E000E0E44 /* TDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDHomeViewController.h; path = "View Controllers/TDHomeViewController.h"; sourceTree = "<group>"; };
-		8D49BED019E0627E000E0E44 /* TDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDHomeViewController.m; path = "View Controllers/TDHomeViewController.m"; sourceTree = "<group>"; };
-		8D49BED319E06887000E0E44 /* TDHomeHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDHomeHeaderTableViewCell.h; path = Cells/TDHomeHeaderTableViewCell.h; sourceTree = "<group>"; };
-		8D49BED419E06887000E0E44 /* TDHomeHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDHomeHeaderTableViewCell.m; path = Cells/TDHomeHeaderTableViewCell.m; sourceTree = "<group>"; };
-		8D49BED619E07212000E0E44 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		8D49BED719E075DC000E0E44 /* TDHomeSongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDHomeSongTableViewCell.h; path = Cells/TDHomeSongTableViewCell.h; sourceTree = "<group>"; };
-		8D49BED819E075DC000E0E44 /* TDHomeSongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDHomeSongTableViewCell.m; path = Cells/TDHomeSongTableViewCell.m; sourceTree = "<group>"; };
-		8D49BEE719E0A2E2000E0E44 /* TDGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDGameView.h; path = View/TDGameView.h; sourceTree = "<group>"; };
-		8D49BEE819E0A2E2000E0E44 /* TDGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDGameView.m; path = View/TDGameView.m; sourceTree = "<group>"; };
-		916FAB60087EB0D4FF03415F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		A8E3CB6D19E0C81600C89C22 /* MyoCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyoCommunicator.h; sourceTree = "<group>"; };
-		A8E3CB6E19E0C81600C89C22 /* MyoCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyoCommunicator.m; sourceTree = "<group>"; };
-		A8E3CB7019E0C9F200C89C22 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = TapDance/MyoKit.framework; sourceTree = "<group>"; };
-		B8149B041618F7BBA42CCF4C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		F0AA414519E0904400541681 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F0AA414719E0921700541681 /* TDGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDGameViewController.h; path = "View Controllers/TDGameViewController.h"; sourceTree = "<group>"; };
-		F0AA414819E0921700541681 /* TDGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDGameViewController.m; path = "View Controllers/TDGameViewController.m"; sourceTree = "<group>"; };
-		F0BCDCA519E098F90030030B /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		F0BCDCA819E099C70030030B /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		F0BCDCA919E099C70030030B /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		8D49BE9619E04874000E0E44 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A8E3CB7119E0C9F200C89C22 /* MyoKit.framework in Frameworks */,
-				F0BCDCA619E098F90030030B /* SpriteKit.framework in Frameworks */,
-				F38E60E4F3DF0D6F28D674F6 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D49BEAF19E04875000E0E44 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		2FE351E6E995712C55F13DA0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B8149B041618F7BBA42CCF4C /* Pods.debug.xcconfig */,
-				916FAB60087EB0D4FF03415F /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8D49BE9019E04874000E0E44 = {
-			isa = PBXGroup;
-			children = (
-				F0AA414519E0904400541681 /* Default-568h@2x.png */,
-				8D49BE9B19E04874000E0E44 /* TapDance */,
-				8D49BEB519E04875000E0E44 /* TapDanceTests */,
-				8D49BE9A19E04874000E0E44 /* Products */,
-				2FE351E6E995712C55F13DA0 /* Pods */,
-				E76DA0CD70E6982AB691FA67 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		8D49BE9A19E04874000E0E44 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8D49BE9919E04874000E0E44 /* TapDance.app */,
-				8D49BEB219E04875000E0E44 /* TapDanceTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8D49BE9B19E04874000E0E44 /* TapDance */ = {
-			isa = PBXGroup;
-			children = (
-				A8E3CB6C19E0C7EB00C89C22 /* Util */,
-				8D49BEE619E0A2B2000E0E44 /* Views */,
-				F0BCDCA719E099A90030030B /* Scenes */,
-				8D49BED219E0686C000E0E44 /* Cells */,
-				8D49BECE19E06267000E0E44 /* View Controllers */,
-				8D49BEA019E04874000E0E44 /* AppDelegate.h */,
-				8D49BEA119E04874000E0E44 /* AppDelegate.m */,
-				8D49BEA919E04874000E0E44 /* Images.xcassets */,
-				8D49BEAB19E04874000E0E44 /* LaunchScreen.xib */,
-				8D49BE9C19E04874000E0E44 /* Supporting Files */,
-			);
-			path = TapDance;
-			sourceTree = "<group>";
-		};
-		8D49BE9C19E04874000E0E44 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8D49BE9D19E04874000E0E44 /* Info.plist */,
-				8D49BE9E19E04874000E0E44 /* main.m */,
-				8D49BED619E07212000E0E44 /* PrefixHeader.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8D49BEB519E04875000E0E44 /* TapDanceTests */ = {
-			isa = PBXGroup;
-			children = (
-				8D49BEB819E04875000E0E44 /* TapDanceTests.m */,
-				8D49BEB619E04875000E0E44 /* Supporting Files */,
-			);
-			path = TapDanceTests;
-			sourceTree = "<group>";
-		};
-		8D49BEB619E04875000E0E44 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8D49BEB719E04875000E0E44 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8D49BECE19E06267000E0E44 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				8D49BECF19E0627E000E0E44 /* TDHomeViewController.h */,
-				8D49BED019E0627E000E0E44 /* TDHomeViewController.m */,
-				F0AA414719E0921700541681 /* TDGameViewController.h */,
-				F0AA414819E0921700541681 /* TDGameViewController.m */,
-			);
-			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		8D49BED219E0686C000E0E44 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				8D49BED319E06887000E0E44 /* TDHomeHeaderTableViewCell.h */,
-				8D49BED419E06887000E0E44 /* TDHomeHeaderTableViewCell.m */,
-				8D49BED719E075DC000E0E44 /* TDHomeSongTableViewCell.h */,
-				8D49BED819E075DC000E0E44 /* TDHomeSongTableViewCell.m */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		8D49BEE619E0A2B2000E0E44 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8D49BEE719E0A2E2000E0E44 /* TDGameView.h */,
-				8D49BEE819E0A2E2000E0E44 /* TDGameView.m */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		A8E3CB6C19E0C7EB00C89C22 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				A8E3CB6D19E0C81600C89C22 /* MyoCommunicator.h */,
-				A8E3CB6E19E0C81600C89C22 /* MyoCommunicator.m */,
-			);
-			name = Util;
-			sourceTree = "<group>";
-		};
-		E76DA0CD70E6982AB691FA67 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A8E3CB7019E0C9F200C89C22 /* MyoKit.framework */,
-				F0BCDCA519E098F90030030B /* SpriteKit.framework */,
-				0C073D2BE761D92DDCA607CD /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F0BCDCA719E099A90030030B /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				F0BCDCA819E099C70030030B /* GameScene.h */,
-				F0BCDCA919E099C70030030B /* GameScene.m */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		8D49BE9819E04874000E0E44 /* TapDance */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8D49BEBC19E04875000E0E44 /* Build configuration list for PBXNativeTarget "TapDance" */;
-			buildPhases = (
-				8ABE57834CB9702E2D6AC51D /* Check Pods Manifest.lock */,
-				8D49BE9519E04874000E0E44 /* Sources */,
-				8D49BE9619E04874000E0E44 /* Frameworks */,
-				8D49BE9719E04874000E0E44 /* Resources */,
-				E43B8569FC704BCA2489ACD4 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TapDance;
-			productName = TapDance;
-			productReference = 8D49BE9919E04874000E0E44 /* TapDance.app */;
-			productType = "com.apple.product-type.application";
-		};
-		8D49BEB119E04875000E0E44 /* TapDanceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8D49BEBF19E04875000E0E44 /* Build configuration list for PBXNativeTarget "TapDanceTests" */;
-			buildPhases = (
-				8D49BEAE19E04875000E0E44 /* Sources */,
-				8D49BEAF19E04875000E0E44 /* Frameworks */,
-				8D49BEB019E04875000E0E44 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8D49BEB419E04875000E0E44 /* PBXTargetDependency */,
-			);
-			name = TapDanceTests;
-			productName = TapDanceTests;
-			productReference = 8D49BEB219E04875000E0E44 /* TapDanceTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		8D49BE9119E04874000E0E44 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = TapDance;
-				TargetAttributes = {
-					8D49BE9819E04874000E0E44 = {
-						CreatedOnToolsVersion = 6.0;
-					};
-					8D49BEB119E04875000E0E44 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 8D49BE9819E04874000E0E44;
-					};
-				};
-			};
-			buildConfigurationList = 8D49BE9419E04874000E0E44 /* Build configuration list for PBXProject "TapDance" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 8D49BE9019E04874000E0E44;
-			productRefGroup = 8D49BE9A19E04874000E0E44 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				8D49BE9819E04874000E0E44 /* TapDance */,
-				8D49BEB119E04875000E0E44 /* TapDanceTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		8D49BE9719E04874000E0E44 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F0AA414619E0904400541681 /* Default-568h@2x.png in Resources */,
-				8D49BEAD19E04874000E0E44 /* LaunchScreen.xib in Resources */,
-				8D49BEAA19E04874000E0E44 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D49BEB019E04875000E0E44 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8ABE57834CB9702E2D6AC51D /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E43B8569FC704BCA2489ACD4 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		8D49BE9519E04874000E0E44 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D49BED519E06887000E0E44 /* TDHomeHeaderTableViewCell.m in Sources */,
-				8D49BEA219E04874000E0E44 /* AppDelegate.m in Sources */,
-				8D49BED919E075DC000E0E44 /* TDHomeSongTableViewCell.m in Sources */,
-				8D49BEE919E0A2E2000E0E44 /* TDGameView.m in Sources */,
-				8D49BED119E0627E000E0E44 /* TDHomeViewController.m in Sources */,
-				A8E3CB6F19E0C81600C89C22 /* MyoCommunicator.m in Sources */,
-				8D49BE9F19E04874000E0E44 /* main.m in Sources */,
-				F0BCDCAA19E099C70030030B /* GameScene.m in Sources */,
-				F0AA414919E0921700541681 /* TDGameViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D49BEAE19E04875000E0E44 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D49BEB919E04875000E0E44 /* TapDanceTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8D49BEB419E04875000E0E44 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8D49BE9819E04874000E0E44 /* TapDance */;
-			targetProxy = 8D49BEB319E04875000E0E44 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8D49BEAB19E04874000E0E44 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8D49BEAC19E04874000E0E44 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		8D49BEBA19E04875000E0E44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		8D49BEBB19E04875000E0E44 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8D49BEBD19E04875000E0E44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8149B041618F7BBA42CCF4C /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/TapDance",
-				);
-				GCC_PREFIX_HEADER = TapDance/PrefixHeader.pch;
-				INFOPLIST_FILE = TapDance/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		8D49BEBE19E04875000E0E44 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 916FAB60087EB0D4FF03415F /* Pods.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/TapDance",
-				);
-				GCC_PREFIX_HEADER = TapDance/PrefixHeader.pch;
-				INFOPLIST_FILE = TapDance/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		8D49BEC019E04875000E0E44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TapDanceTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TapDance.app/TapDance";
-			};
-			name = Debug;
-		};
-		8D49BEC119E04875000E0E44 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TapDanceTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TapDance.app/TapDance";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		8D49BE9419E04874000E0E44 /* Build configuration list for PBXProject "TapDance" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8D49BEBA19E04875000E0E44 /* Debug */,
-				8D49BEBB19E04875000E0E44 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8D49BEBC19E04875000E0E44 /* Build configuration list for PBXNativeTarget "TapDance" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8D49BEBD19E04875000E0E44 /* Debug */,
-				8D49BEBE19E04875000E0E44 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8D49BEBF19E04875000E0E44 /* Build configuration list for PBXNativeTarget "TapDanceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8D49BEC019E04875000E0E44 /* Debug */,
-				8D49BEC119E04875000E0E44 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 8D49BE9119E04874000E0E44 /* Project object */;
-}

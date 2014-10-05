@@ -11,6 +11,7 @@
 #import "TDHomeHeaderTableViewCell.h"
 #import "TDHomeSongTableViewCell.h"
 #import "TDGameViewController.h"
+#import "TDGameOverTableViewController.h"
 #import "MyoCommunicator.h"
 #import <MyoKit/MyoKit.h>
 
@@ -99,10 +100,10 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
         TLMSettingsViewController *settings = [[TLMSettingsViewController alloc] init];
         [self.navigationController pushViewController:settings animated:YES];
     } else {
-        TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%d", indexPath.row]];
+        TDGameOverTableViewController *gvc = [[TDGameOverTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
         [self.navigationController pushViewController:gvc animated:YES];
     }
-}
+   }
 
 - (BOOL)prefersStatusBarHidden {
     return YES;

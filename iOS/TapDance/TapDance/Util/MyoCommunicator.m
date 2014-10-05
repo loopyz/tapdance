@@ -36,15 +36,23 @@
     _acceleration = event.vector;
     NSDate *timestamp = event.timestamp;
     
+    float alpha = 0.8;
+    _gravity = GLKVector3Make(alpha * _gravity.x + (1-alpha) * _acceleration.x,
+                              alpha * _gravity.y + (1-alpha) * _acceleration.y,
+                              alpha * _gravity.z + (1-alpha) * _acceleration.z);
+    
+    _acceleration = GLKVector3Subtract(_acceleration, _gravity);
+    
     // calculate the magnitude of the acceleration
     float magnitude = GLKVector3Length(_acceleration);
     
     if (magnitude > 0.65 && _acceleration.x < 0) {
         if ([timestamp timeIntervalSinceDate:_lastImpactTime] < 0.2 /* seconds */)
             return;
+        
         _lastImpactTime = timestamp;
         
-        NSLog(@"accel: %f, %f, %f", _acceleration.x, _acceleration.y, _acceleration.z);
+       NSLog(@"accel: %f, %f, %f", _acceleration.x, _acceleration.y, _acceleration.z);
     }
 }
 
