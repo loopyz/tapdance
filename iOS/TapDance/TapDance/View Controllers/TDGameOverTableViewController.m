@@ -74,6 +74,7 @@ static NSString *TDGameOverCellIdentifier = @"TDGameOverTableViewCell";
     _gameOverCell.greatView.progressCounter = 1;
     
     _gameOverCell.gradeLabel.text = @"A-";
+    
     return _gameOverCell;
 }
 

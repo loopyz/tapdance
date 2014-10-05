@@ -61,15 +61,20 @@
     MDRadialProgressView *newView = [[MDRadialProgressView alloc] init];
     newView.theme.sliceDividerHidden = YES;
     newView.translatesAutoresizingMaskIntoConstraints = NO;
-    newView.label.hidden = YES;
+    newView.label.translatesAutoresizingMaskIntoConstraints = NO;
+    UILabel *label = newView.label;
+    label.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [newView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[label]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(label)]];
+    [newView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[label]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(label)]];
     
     MDRadialProgressTheme *newTheme = [[MDRadialProgressTheme alloc] init];
     newTheme.completedColor = completedColor;
     newTheme.incompletedColor = UIColorFromRGB(0x4E738B);
     newTheme.centerColor = [UIColor clearColor];
     newTheme.sliceDividerHidden = YES;
-    newTheme.labelColor = [UIColor blackColor];
-    newTheme.labelShadowColor = [UIColor whiteColor];
+    newTheme.labelColor = [UIColor whiteColor];
+    newTheme.labelShadowColor = [UIColor clearColor];
     newTheme.thickness = 10.0f;
     
     newView.theme = newTheme;
