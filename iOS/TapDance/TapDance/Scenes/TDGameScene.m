@@ -27,6 +27,8 @@
 @property(strong, nonatomic) SKSpriteNode *up;
 @property(strong, nonatomic) SKSpriteNode *down;
 
+@property(strong, nonatomic) SKSpriteNode *missedText;
+
 @end
 
 @implementation TDGameScene
@@ -72,6 +74,8 @@
     [self addChild:self.up];
     [self addChild:self.down];
     
+    self.missedText = [self createMissedText];
+    
     for (TDMove *move in self.moves)
     {
         [self addChild: [self createMove:move]];
@@ -93,6 +97,13 @@
     goal.size = CGSizeMake(51,51);
     goal.name = [NSString stringWithFormat:@"%@Move", [move getMoveDirName:direction]];
     return goal;
+}
+
+- (SKSpriteNode *)createMissedText
+{
+    SKSpriteNode *text = [SKSpriteNode spriteNodeWithImageNamed:@"MissedText"];
+    text.position = CGPointMake(self.viewsize.width/2, self.viewsize.height - 150);
+    return text;
 }
 
 - (SKSpriteNode *)createMove:(TDMove *)move
@@ -135,7 +146,21 @@
             self.misses += 1;
             SKAction *moveUpAndAway = [SKAction moveByX:0 y:90 duration:0.5];
             [node runAction:moveUpAndAway];
+            
             // create temporary label here
+            SKAction *pause = [SKAction waitForDuration:1.5];
+            SKAction *remove = [SKAction removeFromParent];
+            SKAction *missedSeq = [SKAction sequence:@[pause, remove]];
+            
+            if (!self.missedText.parent) {
+                [self addChild:self.missedText];
+                [self.missedText runAction:missedSeq];
+            } else {
+                [self.missedText runAction:remove completion:^{
+                    [self addChild:self.missedText];
+                    [self.missedText runAction:missedSeq];
+                }];
+            }
         }
         
         if ([move isLast]) {
