@@ -64,6 +64,13 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
                                             withAnimation:UIStatusBarAnimationFade];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _headerCell.pointsLabel.text = [NSString stringWithFormat:@"Points: %d", (int)[defaults integerForKey:kTDScoreKey]];
+}
+
 #pragma mark - UITableView Delegate Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
