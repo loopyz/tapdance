@@ -101,17 +101,11 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 1) {
-        TLMSettingsViewController *settings = [[TLMSettingsViewController alloc] init];
-        [self.navigationController pushViewController:settings animated:YES];
-    } else if (indexPath.row == 2){
-        TDGameOverTableViewController *gvc = [[TDGameOverTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        [self.navigationController pushViewController:gvc animated:YES];
-    } else {
-        TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%ld",indexPath.row]];
-        [self.navigationController pushViewController:gvc animated:YES];
-    }
-   }
+    TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%ld", indexPath.row]];
+    // TDGameOverTableViewController *gvc = [[TDGameOverTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:gvc animated:YES];
+    // [self presentViewController:gvc animated:YES completion:nil];
+}
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
