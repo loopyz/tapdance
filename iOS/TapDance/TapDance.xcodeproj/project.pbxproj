@@ -21,7 +21,9 @@
 		F0AA414619E0904400541681 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AA414519E0904400541681 /* Default-568h@2x.png */; };
 		F0AA414919E0921700541681 /* TDGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA414819E0921700541681 /* TDGameViewController.m */; };
 		F0BCDCA619E098F90030030B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BCDCA519E098F90030030B /* SpriteKit.framework */; };
-		F0BCDCAA19E099C70030030B /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BCDCA919E099C70030030B /* GameScene.m */; };
+		F0FC312419E0CC1000718934 /* TDMove.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FC312319E0CC1000718934 /* TDMove.m */; };
+		F0FC312719E0CC3C00718934 /* TDGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FC312619E0CC3C00718934 /* TDGameScene.m */; };
+		F0FC312919E0D46800718934 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC312819E0D46800718934 /* UIKit.framework */; };
 		F38E60E4F3DF0D6F28D674F6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C073D2BE761D92DDCA607CD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -65,8 +67,11 @@
 		F0AA414719E0921700541681 /* TDGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDGameViewController.h; path = "View Controllers/TDGameViewController.h"; sourceTree = "<group>"; };
 		F0AA414819E0921700541681 /* TDGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDGameViewController.m; path = "View Controllers/TDGameViewController.m"; sourceTree = "<group>"; };
 		F0BCDCA519E098F90030030B /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		F0BCDCA819E099C70030030B /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		F0BCDCA919E099C70030030B /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		F0FC312219E0CC1000718934 /* TDMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMove.h; sourceTree = "<group>"; };
+		F0FC312319E0CC1000718934 /* TDMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMove.m; sourceTree = "<group>"; };
+		F0FC312519E0CC3C00718934 /* TDGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDGameScene.h; sourceTree = "<group>"; };
+		F0FC312619E0CC3C00718934 /* TDGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDGameScene.m; sourceTree = "<group>"; };
+		F0FC312819E0D46800718934 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0FC312919E0D46800718934 /* UIKit.framework in Frameworks */,
 				F0BCDCA619E098F90030030B /* SpriteKit.framework in Frameworks */,
 				F38E60E4F3DF0D6F28D674F6 /* libPods.a in Frameworks */,
 			);
@@ -122,6 +128,7 @@
 		8D49BE9B19E04874000E0E44 /* TapDance */ = {
 			isa = PBXGroup;
 			children = (
+				F0FC311E19E0C8A200718934 /* Models */,
 				8D49BEE619E0A2B2000E0E44 /* Views */,
 				F0BCDCA719E099A90030030B /* Scenes */,
 				8D49BED219E0686C000E0E44 /* Cells */,
@@ -199,6 +206,7 @@
 		E76DA0CD70E6982AB691FA67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0FC312819E0D46800718934 /* UIKit.framework */,
 				F0BCDCA519E098F90030030B /* SpriteKit.framework */,
 				0C073D2BE761D92DDCA607CD /* libPods.a */,
 			);
@@ -208,10 +216,19 @@
 		F0BCDCA719E099A90030030B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F0BCDCA819E099C70030030B /* GameScene.h */,
-				F0BCDCA919E099C70030030B /* GameScene.m */,
+				F0FC312519E0CC3C00718934 /* TDGameScene.h */,
+				F0FC312619E0CC3C00718934 /* TDGameScene.m */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F0FC311E19E0C8A200718934 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0FC312219E0CC1000718934 /* TDMove.h */,
+				F0FC312319E0CC1000718934 /* TDMove.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,8 +374,9 @@
 				8D49BEE919E0A2E2000E0E44 /* TDGameView.m in Sources */,
 				8D49BED119E0627E000E0E44 /* TDHomeViewController.m in Sources */,
 				8D49BE9F19E04874000E0E44 /* main.m in Sources */,
-				F0BCDCAA19E099C70030030B /* GameScene.m in Sources */,
+				F0FC312719E0CC3C00718934 /* TDGameScene.m in Sources */,
 				F0AA414919E0921700541681 /* TDGameViewController.m in Sources */,
+				F0FC312419E0CC1000718934 /* TDMove.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

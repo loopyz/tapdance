@@ -1,5 +1,5 @@
 //
-//  GameScene.h
+//  TDGameScene.h
 //  TapDance
 //
 //  Created by Niveditha Jayasekar on 10/4/14.
@@ -8,7 +8,8 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface GameScene : SKScene
+@interface TDGameScene : SKScene
 
-- (id) initWithViewSize: (CGSize)size;
+- (id) initWithViewSize: (CGSize)size andMoves: (NSMutableArray *)moves;
+
 @end
