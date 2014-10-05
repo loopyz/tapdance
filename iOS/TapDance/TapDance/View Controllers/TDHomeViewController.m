@@ -11,6 +11,7 @@
 #import "TDHomeHeaderTableViewCell.h"
 #import "TDHomeSongTableViewCell.h"
 #import "TDGameViewController.h"
+#import "TDGameOverTableViewController.h"
 
 @interface TDHomeViewController()<APParallaxViewDelegate>
 
@@ -36,7 +37,6 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
         
         [self.tableView addParallaxWithImage:nil andHeight:70];
         [self.tableView.parallaxView setDelegate:self];
-        [self.tableView addBlackOverlayToParallaxView];
         [self.tableView.parallaxView.imageView setImage:[UIImage imageNamed:@"HomeHeader"]];
         
     }
@@ -94,7 +94,8 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%d", indexPath.row]];
+    // TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%d", indexPath.row]];
+    TDGameOverTableViewController *gvc = [[TDGameOverTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     [self.navigationController pushViewController:gvc animated:YES];
 }
 
