@@ -11,9 +11,9 @@
 
 @interface TDGameViewController : UIViewController
 
-@property (nonatomic, strong) NSString *gameId;
+@property NSInteger gameId;
 @property (nonatomic, strong) SKView *skView;
 
-- (id)initWithGameId: (NSString *)gameId;
+- (id)initWithGameId: (NSInteger)gameId;
 
 @end

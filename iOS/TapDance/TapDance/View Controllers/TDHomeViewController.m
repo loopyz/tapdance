@@ -21,6 +21,10 @@
 @interface TDHomeViewController()<APParallaxViewDelegate>
 
 @property (nonatomic, strong) TDHomeHeaderTableViewCell *headerCell;
+@property (nonatomic, strong) NSArray *artistAvatars;
+@property (nonatomic, strong) NSArray *artistNames;
+@property (nonatomic, strong) NSArray *songTitles;
+@property (nonatomic, strong) NSArray *difficulties;
 
 @end
 
@@ -44,6 +48,12 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
         [self.tableView.parallaxView setDelegate:self];
         [self.tableView.parallaxView.imageView setImage:[UIImage imageNamed:@"HomeHeader"]];
         
+        _artistAvatars = @[@"D4LAvatar", @"TaylorSwiftAvatar", @"YlvisAvatar", @"NyanAvatar", @"SageAvatar", @"TeganAndSaraAvatar", @"ZeddAvatar", @"KeshaAvatar", @"MileyCyrusAvatar", @"JasonDeruloAvatar"];
+        _artistNames = @[@"D4L", @"Taylor Swift", @"Ylvis", @"Nyan Cat", @"Sage The Gemini", @"Tegan and Sara", @"Zedd", @"K$sha", @"Miley Cyrus", @"Jason Derulo"];
+        _songTitles = @[@"Laffy Taffy", @"Shake It Off", @"What Does The Fox Say", @"Nyan Cat Song", @"Red Nose", @"Closer", @"Clarity", @"Die Young", @"We Can't Stop", @"Talk Dirty To Me"];
+        _difficulties = @[@"Med", @"Hard", @"Hard", @"Easy", @"Med", @"Easy", @"Easy", @"Hard", @"Med", @"Hard"];
+        
+        
     }
     return self;
 }
@@ -52,6 +62,13 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
     [super viewDidLoad];
     [[UIApplication sharedApplication] setStatusBarHidden:YES
                                             withAnimation:UIStatusBarAnimationFade];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _headerCell.pointsLabel.text = [NSString stringWithFormat:@"Points: %d", (int)[defaults integerForKey:kTDScoreKey]];
 }
 
 #pragma mark - UITableView Delegate Methods
@@ -90,11 +107,17 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
         return _headerCell;
     } else if (indexPath.section == TDSongSection) {
         TDHomeSongTableViewCell *songCell = [self.tableView dequeueReusableCellWithIdentifier:TDHomeSongTableViewCellIdentifier];
-        songCell.avatar.image = [UIImage imageNamed:@"ArtistAvatar"];
-        songCell.songName.text = @"One more night";
-        songCell.artistName.text = @"Adam Levigne";
-        songCell.difficultyView.backgroundColor = UIColorFromRGB(0x62EB49);
-        songCell.difficultyLabel.text = @"Easy";
+        songCell.avatar.image = [UIImage imageNamed:_artistAvatars[indexPath.row]];
+        songCell.songName.text = _songTitles[indexPath.row];
+        songCell.artistName.text = _artistNames[indexPath.row];
+        songCell.difficultyLabel.text = _difficulties[indexPath.row];
+        if ([songCell.difficultyLabel.text isEqualToString:@"Easy"]) {
+            songCell.difficultyView.backgroundColor = UIColorFromRGB(0x62EB49);
+        } else if ([songCell.difficultyLabel.text isEqualToString:@"Med"]) {
+            songCell.difficultyView.backgroundColor = UIColorFromRGB(0xEAB006);
+        } else {
+            songCell.difficultyView.backgroundColor = UIColorFromRGB(0xE37E7E);
+        }
         
         return songCell;
     } else return nil;
