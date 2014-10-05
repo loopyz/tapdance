@@ -91,13 +91,28 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    TDMove *move1 = [[TDMove alloc] initWithDir:LEFT andTime:1 andLast:NO];
-    TDMove *move2 = [[TDMove alloc] initWithDir:RIGHT andTime:1 andLast:NO];
-    TDMove *move3 = [[TDMove alloc] initWithDir:UP andTime:3 andLast:NO];
-    TDMove *move4 = [[TDMove alloc] initWithDir:DOWN andTime:4 andLast:YES];
+    NSMutableArray *movesArray = [[NSMutableArray alloc] init];
+    for (int x = 0; x < 200; x++) {
+        int r = arc4random_uniform(3);
+        float buffer = arc4random_uniform(3)/100.0f;
+        TDMove *move;
+        if (x == 199) {
+            move = [[TDMove alloc] initWithDir:LEFT andTime:x-buffer andLast:YES];
+        }
+        else if (r == 0) {
+            move = [[TDMove alloc] initWithDir:LEFT andTime:x-buffer andLast:NO];
+        } else if (r == 1) {
+            move = [[TDMove alloc] initWithDir:RIGHT andTime:x-buffer andLast:NO];
+        } else if (r== 2) {
+            move = [[TDMove alloc] initWithDir:UP andTime:x-buffer andLast:NO];
+        } else {
+            move = [[TDMove alloc] initWithDir:DOWN andTime:x-buffer andLast:NO];
+        }
+        [movesArray addObject:move];
+    }
     
-    NSMutableArray *moves = [[NSMutableArray alloc] initWithObjects:move1, move2, move3, move4, nil];
-    TDGameScene *game = [[TDGameScene alloc] initWithViewSize:self.view.frame.size andMoves:moves];
+//    NSMutableArray *moves = [[NSMutableArray alloc] initWithObjects:move1, move2, move3, move4, move5, move6, move7, move8, move9, move10, move11, move12, move13, move14, move15, move16, move17, move18, move19, move20, nil];
+    TDGameScene *game = [[TDGameScene alloc] initWithViewSize:self.view.frame.size andMoves:movesArray];
     
     [_gameView.skView presentScene:game];
     [self.navigationItem setHidesBackButton:YES];
