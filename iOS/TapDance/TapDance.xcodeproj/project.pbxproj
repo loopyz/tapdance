@@ -37,6 +37,26 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>3568935319E156FA0089F018</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.json</string>
+			<key>path</key>
+			<string>model.json</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3568935419E156FA0089F018</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3568935319E156FA0089F018</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>8ABE57834CB9702E2D6AC51D</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -205,6 +225,7 @@ fi
 			<array>
 				<string>F0AA414619E0904400541681</string>
 				<string>8DC912EE19E13A310001590C</string>
+				<string>3568935419E156FA0089F018</string>
 				<string>F08E89AF19E144840063FA97</string>
 				<string>8DC912EB19E13A310001590C</string>
 				<string>8DC912E519E13A310001590C</string>
@@ -770,7 +791,7 @@ fi
 		<dict>
 			<key>children</key>
 			<array>
-				<string>8DC912B719E13A310001590C</string>
+				<string>3568935319E156FA0089F018</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
