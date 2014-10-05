@@ -7,11 +7,16 @@
 //
 
 #import "TDHomeViewController.h"
-#import <APParallaxHeader/UIScrollView+APParallaxHeader.h>
+
 #import "TDHomeHeaderTableViewCell.h"
 #import "TDHomeSongTableViewCell.h"
 #import "TDGameViewController.h"
 #import "TDGameOverTableViewController.h"
+#import "MyoCommunicator.h"
+#import "TDConstants.h"
+
+#import <MyoKit/MyoKit.h>
+#import <APParallaxHeader/UIScrollView+APParallaxHeader.h>
 
 @interface TDHomeViewController()<APParallaxViewDelegate>
 
@@ -77,8 +82,10 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == TDHeaderSection) {
         _headerCell = [self.tableView dequeueReusableCellWithIdentifier:TDHomeHeaderTableViewÇellIdentifier];
-        _headerCell.nameLabel.text = @"Lucy Guo";
-        _headerCell.pointsLabel.text = @"Points: 3528";
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        _headerCell.nameLabel.text = [defaults stringForKey:kTDPersonKey];
+        _headerCell.pointsLabel.text = [NSString stringWithFormat:@"Points: %d", [defaults integerForKey:kTDScoreKey]];
         
         return _headerCell;
     } else if (indexPath.section == TDSongSection) {

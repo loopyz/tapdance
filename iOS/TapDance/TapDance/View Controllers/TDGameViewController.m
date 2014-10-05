@@ -7,12 +7,12 @@
 //
 
 #import "TDGameViewController.h"
-#import "TDGameView.h"
 
+#import "TDGameView.h"
+#import "TDGameScene.h"
+#import "TDMove.h"
 
 #import <SpriteKit/SpriteKit.h>
-
-#import "GameScene.h"
 
 @interface TDGameViewController ()
 
@@ -45,8 +45,13 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"size %d %d", self.skView.frame.size.height, self.skView.frame.size.width);
-    GameScene *game = [[GameScene alloc] initWithViewSize:self.view.frame.size];
+    TDMove *move1 = [[TDMove alloc] initWithDir:LEFT andTime:1 andLast:NO];
+    TDMove *move2 = [[TDMove alloc] initWithDir:RIGHT andTime:1 andLast:NO];
+    TDMove *move3 = [[TDMove alloc] initWithDir:UP andTime:3 andLast:NO];
+    TDMove *move4 = [[TDMove alloc] initWithDir:DOWN andTime:4 andLast:NO];
+
+    NSMutableArray *moves = [[NSMutableArray alloc] initWithObjects:move1, move2, move3, move4, nil];
+    TDGameScene *game = [[TDGameScene alloc] initWithViewSize:self.view.frame.size andMoves:moves];
     
     [_gameView.skView presentScene:game];
     [self.navigationItem setHidesBackButton:YES];
@@ -58,16 +63,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

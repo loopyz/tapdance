@@ -14,6 +14,7 @@
 + (id) defaultCommunicator;
 
 @property GLKVector3 acceleration;
+@property GLKVector3 gravity;
 @property GLKVector3 rotation;
 @property NSDate *lastImpactTime;
 

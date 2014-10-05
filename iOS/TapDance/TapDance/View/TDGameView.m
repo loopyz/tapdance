@@ -8,6 +8,8 @@
 
 #import "TDGameView.h"
 
+#define GAME_DEBUG YES
+
 @implementation TDGameView
 
 - (id)initWithFrame:(CGRect)frame {
@@ -31,9 +33,9 @@
 - (void)setupSKView {
     self.skView = [[SKView alloc] init];
     self.skView.translatesAutoresizingMaskIntoConstraints = NO;
-    self.skView.showsDrawCount = YES;
-    self.skView.showsNodeCount = YES;
-    self.skView.showsFPS = YES;
+    self.skView.showsDrawCount = GAME_DEBUG;
+    self.skView.showsNodeCount = GAME_DEBUG;
+    self.skView.showsFPS = GAME_DEBUG;
     self.skView.backgroundColor = [UIColor clearColor];
     [self addSubview:self.skView];
     
