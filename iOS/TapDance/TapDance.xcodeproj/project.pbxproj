@@ -15,7 +15,6 @@
 		8DC912E719E13A310001590C /* TDGameOverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912BE19E13A310001590C /* TDGameOverTableViewCell.m */; };
 		8DC912E819E13A310001590C /* TDHomeHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912C019E13A310001590C /* TDHomeHeaderTableViewCell.m */; };
 		8DC912E919E13A310001590C /* TDHomeSongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912C219E13A310001590C /* TDHomeSongTableViewCell.m */; };
-		8DC912EB19E13A310001590C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DC912C419E13A310001590C /* Info.plist */; };
 		8DC912EC19E13A310001590C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912C519E13A310001590C /* main.m */; };
 		8DC912ED19E13A310001590C /* TDMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912C819E13A310001590C /* TDMove.m */; };
 		8DC912EE19E13A310001590C /* LaffyTaffy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC912CA19E13A310001590C /* LaffyTaffy.mp3 */; };
@@ -380,7 +379,6 @@
 				F0AA414619E0904400541681 /* Default-568h@2x.png in Resources */,
 				8DC912EE19E13A310001590C /* LaffyTaffy.mp3 in Resources */,
 				F08E89AF19E144840063FA97 /* Images.xcassets in Resources */,
-				8DC912EB19E13A310001590C /* Info.plist in Resources */,
 				8DC912E519E13A310001590C /* LaunchScreen.xib in Resources */,
 				8DC912E419E13A310001590C /* model.json in Resources */,
 				8DC912E619E13A310001590C /* Main.storyboard in Resources */,
