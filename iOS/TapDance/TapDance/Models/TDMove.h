@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface TDMove : NSObject
 
@@ -20,9 +21,12 @@ enum DIR {LEFT, RIGHT, UP, DOWN};
 - (void)completeMove;
 - (BOOL)isCompleted;
 - (NSString *)getMoveDirName;
+- (NSString *)getMoveDirName:(enum DIR)direction;
 - (NSString *)getNodeName;
-- (NSValue *)getNodePosition;
+- (NSValue *)getNodePosition:(CGFloat)width;
+- (NSValue *)getNodePosition:(CGSize)size andDir:(enum DIR)direction;
 - (NSString *)getNodePicName;
+- (NSString *)getNodePicName:(enum DIR)direction;
 - (double)getTime;
 - (BOOL)isLast;
 

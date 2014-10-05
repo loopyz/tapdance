@@ -18,6 +18,11 @@
 @property(strong, nonatomic) NSMutableArray *moves;
 @property NSInteger score;
 
+@property(strong, nonatomic) SKSpriteNode *left;
+@property(strong, nonatomic) SKSpriteNode *right;
+@property(strong, nonatomic) SKSpriteNode *up;
+@property(strong, nonatomic) SKSpriteNode *down;
+
 @end
 
 @implementation TDGameScene
@@ -47,6 +52,16 @@
 {
     [self addChild:[self createBackground]];
     
+    self.left = [self createGoal:LEFT];
+    self.right = [self createGoal:RIGHT];
+    self.up = [self createGoal:UP];
+    self.down = [self createGoal:DOWN];
+    
+    [self addChild:self.left];
+    [self addChild:self.right];
+    [self addChild:self.up];
+    [self addChild:self.down];
+    
     for (TDMove *move in self.moves)
     {
         [self addChild: [self createMove:move]];
@@ -59,23 +74,44 @@
     bg.position = CGPointMake(self.viewsize.width/2, self.viewsize.height/2);
     return bg;
 }
+
+- (SKSpriteNode *)createGoal:(enum DIR)direction
+{
+    TDMove *move = [[TDMove alloc] init];
+    SKSpriteNode *goal = [SKSpriteNode spriteNodeWithImageNamed:[move getNodePicName:direction]];
+    goal.position = [[move getNodePosition:self.viewsize andDir:direction] CGPointValue];
+    goal.size = CGSizeMake(51,51);
+    goal.name = [NSString stringWithFormat:@"%@Move", [move getMoveDirName:direction]];
+    return goal;
+}
          
 - (SKSpriteNode *)createMove:(TDMove *)move
 {
     SKSpriteNode *node = [SKSpriteNode spriteNodeWithImageNamed:[move getNodePicName]];
 
     node.size = CGSizeMake(51, 51);
-    node.position = [[move getNodePosition] CGPointValue];
+    node.position = [[move getNodePosition:self.viewsize.width] CGPointValue];
     node.name = [move getNodeName];
 
     NSTimeInterval time = [move getTime];
     NSLog(@"time %f", time);
     SKAction *pause = [SKAction waitForDuration:[move getTime]];
-    SKAction *moveUp = [SKAction moveByX:0 y:self.viewsize.height duration:5];
+    SKAction *moveUp = [SKAction moveByX:0 y:self.viewsize.height-90 duration:5];
     SKAction *moveSeq = [SKAction sequence:@[pause, moveUp]];
     [node runAction:moveSeq completion:^{
+        if (move.direction == LEFT) {
+            [move completeMove];
+        }
         if ([move isCompleted]) {
             self.score += 1;
+            SKAction *fadeAway = [SKAction fadeOutWithDuration: 0.25];
+            SKAction *remove = [SKAction removeFromParent];
+            SKAction *closeSeq = [SKAction sequence:@[fadeAway, remove]];
+            [node runAction:closeSeq];
+        } else {
+            SKAction *moveUpAndAway = [SKAction moveByX:0 y:90 duration:0.5];
+            [node runAction:moveUpAndAway];
+            // create temporary label here
         }
         
         if ([move isLast]) {

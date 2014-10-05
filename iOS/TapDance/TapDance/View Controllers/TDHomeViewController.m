@@ -85,7 +85,7 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         _headerCell.nameLabel.text = [defaults stringForKey:kTDPersonKey];
-        _headerCell.pointsLabel.text = [NSString stringWithFormat:@"Points: %ld", [defaults integerForKey:kTDScoreKey]];
+        _headerCell.pointsLabel.text = [NSString stringWithFormat:@"Points: %d", (int)[defaults integerForKey:kTDScoreKey]];
         
         return _headerCell;
     } else if (indexPath.section == TDSongSection) {
@@ -101,7 +101,7 @@ static NSString *TDHomeSongTableViewCellIdentifier = @"TDHomeSongTableViewCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%ld", indexPath.row]];
+    TDGameViewController *gvc = [[TDGameViewController alloc] initWithGameId:[NSString stringWithFormat:@"%d", (int)indexPath.row]];
     // TDGameOverTableViewController *gvc = [[TDGameOverTableViewController alloc] initWithStyle:UITableViewStylePlain];
     [self.navigationController pushViewController:gvc animated:YES];
     // [self presentViewController:gvc animated:YES completion:nil];

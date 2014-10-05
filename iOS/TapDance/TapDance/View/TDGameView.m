@@ -17,7 +17,6 @@
     if (self) {
         [self setupBackground];
         [self setupSKView];
-        [self setupArrows];
     }
     return self;
 }

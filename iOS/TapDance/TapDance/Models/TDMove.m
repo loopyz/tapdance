@@ -8,8 +8,6 @@
 
 #import "TDMove.h"
 
-#import <UIKit/UIKit.h>
-
 @implementation TDMove
 
 - (id)initWithDir: (enum DIR)direction andTime: (double)time andLast:(bool)last
@@ -48,22 +46,54 @@
     }
 }
 
+- (NSString *)getMoveDirName:(enum DIR)direction
+{
+    switch (direction) {
+        case LEFT:
+            return @"left";
+        case RIGHT:
+            return @"right";
+        case UP:
+            return @"up";
+        default:
+            return @"down";
+    }
+}
+
 - (NSString *)getNodeName
 {
     return [NSString stringWithFormat:@"%@%fMoveNode", [self getMoveDirName], self.time];
 }
 
-- (NSValue *)getNodePosition
+- (NSValue *)getNodePosition:(CGFloat)width
 {
+    CGFloat eighth = width/8;
+    CGFloat height = 50;
     switch (self.direction) {
         case LEFT:
-            return [NSValue valueWithCGPoint:CGPointMake(50,50)];
+            return [NSValue valueWithCGPoint:CGPointMake(eighth,height)];
         case RIGHT:
-            return [NSValue valueWithCGPoint:CGPointMake(50+80*3,50)];
+            return [NSValue valueWithCGPoint:CGPointMake(7*eighth,height)];
         case UP:
-            return [NSValue valueWithCGPoint:CGPointMake(50+80*2,50)];
+            return [NSValue valueWithCGPoint:CGPointMake(5*eighth,height)];
         default:
-            return [NSValue valueWithCGPoint:CGPointMake(50+80,50)];
+            return [NSValue valueWithCGPoint:CGPointMake(3*eighth,height)];
+    }
+}
+
+- (NSValue *)getNodePosition:(CGSize)size andDir:(enum DIR)direction
+{
+    CGFloat eighth = size.width/8;
+    CGFloat height = size.height-40;
+    switch (direction) {
+        case LEFT:
+            return [NSValue valueWithCGPoint:CGPointMake(eighth,height)];
+        case RIGHT:
+            return [NSValue valueWithCGPoint:CGPointMake(7*eighth,height)];
+        case UP:
+            return [NSValue valueWithCGPoint:CGPointMake(5*eighth,height)];
+        default:
+            return [NSValue valueWithCGPoint:CGPointMake(3*eighth,height)];
     }
 }
 
@@ -78,6 +108,20 @@
             return @"UpArrow";
         default:
             return @"DownArrow";
+    }
+}
+
+- (NSString *)getNodePicName:(enum DIR)direction
+{
+    switch (direction) {
+        case LEFT:
+            return @"LeftArrowPad";
+        case RIGHT:
+            return @"RightArrowPad";
+        case UP:
+            return @"UpArrowPad";
+        default:
+            return @"DownArrowPad";
     }
 }
 
