@@ -22,6 +22,7 @@
 
 @property (nonatomic, strong) TDGameView *gameView;
 @property (nonatomic, strong) NSArray *songs;
+@property (nonatomic, strong) NSArray *beats;
 
 @end
 
@@ -33,6 +34,10 @@
     if (self) {
         // Custom initialization
         self.view.backgroundColor = UIColorFromRGB(0xFBFBFB);
+        
+        _beats = @[@(.779), @(.375), @(.46875), @(.5), @(.733), @(.434), @(.46875), @(.46875), @(.75), @(.5769)];
+        
+        _beats = [NSArray arrayWithObjects:[NSNumber numberWithFloat:.779], [NSNumber numberWithFloat:.375], [NSNumber numberWithFloat:.46875], [NSNumber numberWithFloat:.5], [NSNumber numberWithFloat:.773], [NSNumber numberWithFloat:.434], [NSNumber numberWithFloat:.46875], [NSNumber numberWithFloat:.46875], [NSNumber numberWithFloat:.75], [NSNumber numberWithFloat:.5769], nil];
         
         self.gameId = gameId;
         _gameView = [[TDGameView alloc] init];
@@ -94,19 +99,20 @@
     NSMutableArray *movesArray = [[NSMutableArray alloc] init];
     for (int x = 0; x < 200; x++) {
         int r = arc4random_uniform(3);
-        float buffer = arc4random_uniform(3)/100.0f;
         TDMove *move;
+        NSNumber *num = _beats[self.gameId];
+        float timeGap = [num floatValue];
         if (x == 199) {
-            move = [[TDMove alloc] initWithDir:LEFT andTime:x-buffer andLast:YES];
+            move = [[TDMove alloc] initWithDir:LEFT andTime:timeGap*x andLast:YES];
         }
         else if (r == 0) {
-            move = [[TDMove alloc] initWithDir:LEFT andTime:x-buffer andLast:NO];
+            move = [[TDMove alloc] initWithDir:LEFT andTime:timeGap*x andLast:NO];
         } else if (r == 1) {
-            move = [[TDMove alloc] initWithDir:RIGHT andTime:x-buffer andLast:NO];
+            move = [[TDMove alloc] initWithDir:RIGHT andTime:timeGap*x andLast:NO];
         } else if (r== 2) {
-            move = [[TDMove alloc] initWithDir:UP andTime:x-buffer andLast:NO];
+            move = [[TDMove alloc] initWithDir:UP andTime:timeGap*x andLast:NO];
         } else {
-            move = [[TDMove alloc] initWithDir:DOWN andTime:x-buffer andLast:NO];
+            move = [[TDMove alloc] initWithDir:DOWN andTime:timeGap*x andLast:NO];
         }
         [movesArray addObject:move];
     }

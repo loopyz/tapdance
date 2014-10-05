@@ -45,6 +45,10 @@ const char *strings[] = {"CENTER", "UP", "DOWN", "LEFT", "RIGHT"};
                                                  selector:@selector(didConnectDevice:)
                                                      name:TLMHubDidConnectDeviceNotification
                                                    object:nil];
+        _velocity = GLKVector3Make(0.0, 0.0, 0.0);
+        _rotational = GLKVector3Make(0.0, 0.0, 0.0);
+        _lastAccelTime = [NSDate date];
+        _lastRotateTime = [NSDate date];
     }
     return self;
 }
@@ -65,18 +69,32 @@ const char *strings[] = {"CENTER", "UP", "DOWN", "LEFT", "RIGHT"};
     
     _acceleration = GLKVector3Subtract(_acceleration, _gravity);
     
+    // update velocity
+    float delta = [timestamp timeIntervalSinceDate:_lastAccelTime];
+    _lastAccelTime = timestamp;
+    _velocity = GLKVector3Add(_velocity, GLKVector3MultiplyScalar(_acceleration, delta));
+
+    
     // calculate the magnitude of the acceleration
     float magnitude = GLKVector3Length(_acceleration);
     
-    if (magnitude > 0.65 && _acceleration.x > 0) {
+    if (magnitude > 0.7 && _acceleration.x > 0) {
         if ([timestamp timeIntervalSinceDate:_lastImpactTime] < 0.2 /* seconds */)
             return;
         
         _lastImpactTime = timestamp;
         
+        // normalize velocity and angular velocity for prediction
+        _velocity = GLKVector3Normalize(_velocity);
+        _rotational = GLKVector3Normalize(GLKVector3Add(_rotational, GLKVector3Make(0.000001, 0.000001, 0.00001)));
+        
         _direction = [self predictStep];
         NSLog(@"%s", strings[_direction]);
        //NSLog(@"accel: %f, %f, %f", _acceleration.x, _acceleration.y, _acceleration.z);
+        
+        // reset velocity and rotational velocity
+        _velocity = GLKVector3Make(0.0, 0.0, 0.0);
+        _rotational = GLKVector3Make(0.0, 0.0, 0.0);
     }
 }
 
@@ -96,6 +114,12 @@ const char *strings[] = {"CENTER", "UP", "DOWN", "LEFT", "RIGHT"};
 - (void) didReceiveGyroscopeEvent: (NSNotification*) notification {
     TLMGyroscopeEvent *event = notification.userInfo[kTLMKeyGyroscopeEvent];
     _angular = event.vector;
+    
+    // update angular velocity
+    NSDate *timestamp = [NSDate date];
+    float delta = [timestamp timeIntervalSinceDate:_lastRotateTime];
+    _lastRotateTime = timestamp;
+    _rotational = GLKVector3Add(_rotational, GLKVector3MultiplyScalar(_angular, delta));
 }
 
 - (void) didConnectDevice: (NSNotification*) notification {
@@ -104,28 +128,52 @@ const char *strings[] = {"CENTER", "UP", "DOWN", "LEFT", "RIGHT"};
 }
 
 - (direction) predictStep {
+    NSLog(@"%f %f %f", _velocity.x, _velocity.y, _velocity.z);
+    if (fabs(_velocity.y) > 2 * fabs(_velocity.z)) {
+        if (_velocity.y < 0.0)
+            return RIGHT;
+        else
+            return LEFT;
+    } else {
+        if (_velocity.z < 0.0) {
+            return DOWN;
+            
+        } else {
+            return UP;
+        }
+    }
     NSDictionary *data = _model[_direction];
     NSArray *matrix = data[@"matrix"];
     NSArray *mean = data[@"mean"];
     NSArray *std = data[@"std"];
     float newData[] = {_acceleration.x, _acceleration.y, _acceleration.z,
-                _angular.x, _angular.y, _angular.z, _yaw, _pitch, _roll};
-    for (int i = 0; i < 9; i++) {
+                _angular.x, _angular.y, _angular.z,
+                _yaw, _pitch, _roll,
+                _velocity.x, _velocity.y, _velocity.z,
+                _rotational.x, _rotational.y, _rotational.z};
+    NSLog(@"%f %f %f %f %f %f %f %f %f %f %f %f %f %f %f", _acceleration.x, _acceleration.y, _acceleration.z,
+          _angular.x, _angular.y, _angular.z,
+          _yaw, _pitch, _roll,
+          _velocity.x, _velocity.y, _velocity.z,
+          _rotational.x, _rotational.y, _rotational.z);
+    for (int i = 0; i < 15; i++) {
         newData[i] -= [[mean objectAtIndex:i] floatValue];
-        newData[i] /= [[std objectAtIndex:i] floatValue];
+        float std_ = [[std objectAtIndex:i] floatValue];
+        newData[i] /= std_ * std_;
     }
     NSMutableArray *intercept = [NSMutableArray arrayWithArray:data[@"intercept"]];
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
             NSNumber *result = [NSNumber numberWithFloat:
                                 newData[j] * [[[matrix objectAtIndex:i] objectAtIndex:j] floatValue]];
-            [intercept setObject:result atIndexedSubscript:i];
+            [intercept replaceObjectAtIndex:i withObject:result];
         }
     }
+    NSLog(@"%@", intercept);
     int index = 0;
     float bigFloat = -100000000.0f;
     for (int i = 0; i < 5; i++) {
-        if (i != 3 && [[intercept objectAtIndex:i] floatValue] > bigFloat) {
+        if ([[intercept objectAtIndex:i] floatValue] > bigFloat) {
             bigFloat = [[intercept objectAtIndex:i] floatValue];
             index = i;
         }

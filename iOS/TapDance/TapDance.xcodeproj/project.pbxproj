@@ -15,6 +15,7 @@
 		8DC912E719E13A310001590C /* TDGameOverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912BE19E13A310001590C /* TDGameOverTableViewCell.m */; };
 		8DC912E819E13A310001590C /* TDHomeHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912C019E13A310001590C /* TDHomeHeaderTableViewCell.m */; };
 		8DC912E919E13A310001590C /* TDHomeSongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912C219E13A310001590C /* TDHomeSongTableViewCell.m */; };
+		8DC912EB19E13A310001590C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DC912C419E13A310001590C /* Info.plist */; };
 		8DC912EC19E13A310001590C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912C519E13A310001590C /* main.m */; };
 		8DC912ED19E13A310001590C /* TDMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912C819E13A310001590C /* TDMove.m */; };
 		8DC912EE19E13A310001590C /* LaffyTaffy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC912CA19E13A310001590C /* LaffyTaffy.mp3 */; };
@@ -27,18 +28,8 @@
 		8DC912F619E13A310001590C /* TDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912DE19E13A310001590C /* TDHomeViewController.m */; };
 		8DC912F719E13A310001590C /* TDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912E019E13A310001590C /* TDLoginViewController.m */; };
 		8DC912F819E13A310001590C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC912E219E13A310001590C /* ViewController.m */; };
-		8DC9130019E1597E0001590C /* nyancat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC912F919E1597E0001590C /* nyancat.mp3 */; };
-		8DC9130119E1597E0001590C /* rednose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC912FA19E1597E0001590C /* rednose.mp3 */; };
-		8DC9130219E1597E0001590C /* shakeitoff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC912FB19E1597E0001590C /* shakeitoff.mp3 */; };
-		8DC9130319E1597E0001590C /* talkdirtytome.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC912FC19E1597E0001590C /* talkdirtytome.mp3 */; };
-		8DC9130419E1597E0001590C /* wecantstop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC912FD19E1597E0001590C /* wecantstop.mp3 */; };
-		8DC9130519E1597E0001590C /* whatdoesthefoxsay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC912FE19E1597E0001590C /* whatdoesthefoxsay.mp3 */; };
-		8DC9130619E1597E0001590C /* wiggle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC912FF19E1597E0001590C /* wiggle.mp3 */; };
-		8DC9130B19E159830001590C /* clarity.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC9130719E159830001590C /* clarity.mp3 */; };
-		8DC9130C19E159830001590C /* closer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC9130819E159830001590C /* closer.mp3 */; };
-		8DC9130D19E159830001590C /* collegdrop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC9130919E159830001590C /* collegdrop.mp3 */; };
-		8DC9130E19E159830001590C /* dieyoung.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DC9130A19E159830001590C /* dieyoung.mp3 */; };
 		8DE9958119E0D40C00C4926D /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE9958019E0D40C00C4926D /* MyoKit.framework */; };
+		A888FBE419E16BA100AA9FD5 /* model.json in Resources */ = {isa = PBXBuildFile; fileRef = A888FBE319E16BA100AA9FD5 /* model.json */; };
 		F08E89AF19E144840063FA97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F08E89AE19E144840063FA97 /* Images.xcassets */; };
 		F08E89B119E145A30063FA97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E89B019E145A30063FA97 /* UIKit.framework */; };
 		F08E89B319E145AC0063FA97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08E89B219E145AC0063FA97 /* Foundation.framework */; };
@@ -98,19 +89,9 @@
 		8DC912E019E13A310001590C /* TDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLoginViewController.m; sourceTree = "<group>"; };
 		8DC912E119E13A310001590C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8DC912E219E13A310001590C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8DC912F919E1597E0001590C /* nyancat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nyancat.mp3; sourceTree = "<group>"; };
-		8DC912FA19E1597E0001590C /* rednose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rednose.mp3; sourceTree = "<group>"; };
-		8DC912FB19E1597E0001590C /* shakeitoff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shakeitoff.mp3; sourceTree = "<group>"; };
-		8DC912FC19E1597E0001590C /* talkdirtytome.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = talkdirtytome.mp3; sourceTree = "<group>"; };
-		8DC912FD19E1597E0001590C /* wecantstop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wecantstop.mp3; sourceTree = "<group>"; };
-		8DC912FE19E1597E0001590C /* whatdoesthefoxsay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whatdoesthefoxsay.mp3; sourceTree = "<group>"; };
-		8DC912FF19E1597E0001590C /* wiggle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wiggle.mp3; sourceTree = "<group>"; };
-		8DC9130719E159830001590C /* clarity.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clarity.mp3; sourceTree = "<group>"; };
-		8DC9130819E159830001590C /* closer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = closer.mp3; sourceTree = "<group>"; };
-		8DC9130919E159830001590C /* collegdrop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = collegdrop.mp3; sourceTree = "<group>"; };
-		8DC9130A19E159830001590C /* dieyoung.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dieyoung.mp3; sourceTree = "<group>"; };
 		8DE9958019E0D40C00C4926D /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = TapDance/MyoKit.framework; sourceTree = "<group>"; };
 		916FAB60087EB0D4FF03415F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A888FBE319E16BA100AA9FD5 /* model.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = model.json; sourceTree = "<group>"; };
 		B8149B041618F7BBA42CCF4C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F08E89AE19E144840063FA97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F08E89B019E145A30063FA97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -193,10 +174,10 @@
 		8DC912B319E13A310001590C /* TapDance */ = {
 			isa = PBXGroup;
 			children = (
+				A888FBE219E16BA100AA9FD5 /* Assets */,
 				F08E89AE19E144840063FA97 /* Images.xcassets */,
 				8DC912B419E13A310001590C /* AppDelegate.h */,
 				8DC912B519E13A310001590C /* AppDelegate.m */,
-				8DC912B619E13A310001590C /* Assets */,
 				8DC912B819E13A310001590C /* LaunchScreen.xib */,
 				8DC912BA19E13A310001590C /* Main.storyboard */,
 				8DC912BC19E13A310001590C /* Cells */,
@@ -210,14 +191,6 @@
 				8DC912E219E13A310001590C /* ViewController.m */,
 			);
 			path = TapDance;
-			sourceTree = "<group>";
-		};
-		8DC912B619E13A310001590C /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				8DC912B719E13A310001590C /* model.json */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		8DC912BC19E13A310001590C /* Cells */ = {
@@ -245,17 +218,6 @@
 		8DC912C919E13A310001590C /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				8DC9130719E159830001590C /* clarity.mp3 */,
-				8DC9130819E159830001590C /* closer.mp3 */,
-				8DC9130919E159830001590C /* collegdrop.mp3 */,
-				8DC9130A19E159830001590C /* dieyoung.mp3 */,
-				8DC912F919E1597E0001590C /* nyancat.mp3 */,
-				8DC912FA19E1597E0001590C /* rednose.mp3 */,
-				8DC912FB19E1597E0001590C /* shakeitoff.mp3 */,
-				8DC912FC19E1597E0001590C /* talkdirtytome.mp3 */,
-				8DC912FD19E1597E0001590C /* wecantstop.mp3 */,
-				8DC912FE19E1597E0001590C /* whatdoesthefoxsay.mp3 */,
-				8DC912FF19E1597E0001590C /* wiggle.mp3 */,
 				8DC912CA19E13A310001590C /* LaffyTaffy.mp3 */,
 			);
 			path = Music;
@@ -303,6 +265,14 @@
 				8DC912E019E13A310001590C /* TDLoginViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A888FBE219E16BA100AA9FD5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A888FBE319E16BA100AA9FD5 /* model.json */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		E76DA0CD70E6982AB691FA67 /* Frameworks */ = {
@@ -409,23 +379,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC9130C19E159830001590C /* closer.mp3 in Resources */,
-				8DC9130D19E159830001590C /* collegdrop.mp3 in Resources */,
-				8DC9130119E1597E0001590C /* rednose.mp3 in Resources */,
-				8DC9130619E1597E0001590C /* wiggle.mp3 in Resources */,
 				F0AA414619E0904400541681 /* Default-568h@2x.png in Resources */,
 				8DC912EE19E13A310001590C /* LaffyTaffy.mp3 in Resources */,
 				F08E89AF19E144840063FA97 /* Images.xcassets in Resources */,
+				A888FBE419E16BA100AA9FD5 /* model.json in Resources */,
+				8DC912EB19E13A310001590C /* Info.plist in Resources */,
 				8DC912E519E13A310001590C /* LaunchScreen.xib in Resources */,
-				8DC9130319E1597E0001590C /* talkdirtytome.mp3 in Resources */,
-				8DC9130E19E159830001590C /* dieyoung.mp3 in Resources */,
-				8DC9130519E1597E0001590C /* whatdoesthefoxsay.mp3 in Resources */,
-				8DC9130219E1597E0001590C /* shakeitoff.mp3 in Resources */,
-				8DC9130B19E159830001590C /* clarity.mp3 in Resources */,
-				8DC9130419E1597E0001590C /* wecantstop.mp3 in Resources */,
 				8DC912E419E13A310001590C /* model.json in Resources */,
 				8DC912E619E13A310001590C /* Main.storyboard in Resources */,
-				8DC9130019E1597E0001590C /* nyancat.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
