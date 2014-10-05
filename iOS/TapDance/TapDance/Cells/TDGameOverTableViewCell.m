@@ -77,12 +77,25 @@
     return newView;
 }
 
+- (UILabel *)generateSubtitleLabelWithText:(NSString *)subtitle {
+    UILabel *label = [[UILabel alloc] init];
+    label.text = subtitle;
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont fontWithName:@"Avenir" size:15.0f];
+    label.translatesAutoresizingMaskIntoConstraints = NO;
+    return label;
+}
+
 - (void)setupMissesView {
     _missesView = [self generateProgressView:UIColorFromRGB(0x00A5FF)];
     [self.contentView addSubview:_missesView];
     
+    UILabel *missesLabel = [self generateSubtitleLabelWithText:@"Missed"];
+    [self.contentView addSubview:missesLabel];
+    
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[_missesView(50)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_missesView)]];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_missesView(50)]-35-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_missesView)]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[missesLabel]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(missesLabel)]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_missesView(50)]-0-[missesLabel]-15-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_missesView, missesLabel)]];
     
 }
 
@@ -90,24 +103,36 @@
     _averageView = [self generateProgressView:UIColorFromRGB(0x11CBC5)];
     [self.contentView addSubview:_averageView];
     
+    UILabel *averageLabel = [self generateSubtitleLabelWithText:@"Average"];
+    [self.contentView addSubview:averageLabel];
+    
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_missesView]-20-[_averageView(50)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_averageView, _missesView)]];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_averageView(50)]-35-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_averageView)]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_missesView]-15-[averageLabel]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(averageLabel, _missesView)]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_averageView(50)]-0-[averageLabel]-15-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_averageView, averageLabel)]];
 }
 
 - (void)setupGoodView {
     _goodView = [self generateProgressView:UIColorFromRGB(0xCE085B)];
     [self.contentView addSubview:_goodView];
     
+    UILabel *goodLabel = [self generateSubtitleLabelWithText:@"Good"];
+    [self.contentView addSubview:goodLabel];
+    
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_averageView]-20-[_goodView(50)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_averageView, _goodView)]];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_goodView(50)]-35-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_goodView)]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_averageView]-23-[goodLabel]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_averageView, goodLabel)]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_goodView(50)]-0-[goodLabel]-15-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_goodView,goodLabel)]];
 }
 
 - (void)setupGreatView {
     _greatView = [self generateProgressView:UIColorFromRGB(0x3AC006)];
     [self.contentView addSubview:_greatView];
     
+    UILabel *greatLabel = [self generateSubtitleLabelWithText:@"Great"];
+    [self.contentView addSubview:greatLabel];
+    
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_goodView]-20-[_greatView(50)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_greatView, _goodView)]];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_greatView(50)]-35-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_greatView)]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_goodView]-25-[greatLabel]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(greatLabel, _goodView)]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_greatView(50)]-0-[greatLabel]-15-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_greatView, greatLabel)]];
 }
 
 - (void)awakeFromNib {
