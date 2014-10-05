@@ -9,13 +9,24 @@
 #import <Foundation/Foundation.h>
 #import <MyoKit/MyoKit.h>
 
+typedef enum {
+    CENTER = 0,
+    UP = 1,
+    DOWN = 2,
+    LEFT = 3,
+    RIGHT = 4} direction;
+
 @interface MyoCommunicator : NSObject
 
 + (id) defaultCommunicator;
 
 @property GLKVector3 acceleration;
 @property GLKVector3 gravity;
-@property GLKVector3 rotation;
+@property GLKVector3 angular;
+@property float yaw;
+@property float pitch;
+@property float roll;
+@property direction direction;
 @property NSDate *lastImpactTime;
 
 @end
