@@ -17,6 +17,7 @@
     if (self) {
         [self setupBackground];
         [self setupSKView];
+        [self setupArrows];
     }
     return self;
 }
@@ -41,6 +42,22 @@
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_skView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_skView)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_skView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_skView)]];
+}
+
+- (void)setupArrows {
+    UIImageView *leftArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LeftArrowPad"]];
+    [self addSubview:leftArrow];
+    
+    UIImageView *downArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LeftArrowPad"]];
+    [self addSubview:downArrow];
+    
+    UIImageView *upArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"UpArrowPad"]];
+    [self addSubview:upArrow];
+    
+    UIImageView *rightArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"RightArrowPad"]];
+    [self addSubview:rightArrow];
+    
+    
 }
 
 @end
